@@ -1,0 +1,11 @@
+{
+    "retriever_source"             : "xx/data/ott-qa/embeddings/improved/", 
+    "retriever_destination"        : "xx/data/ott-qa/retriever/improved003/",
+
+    "reranker_marcomini_source"        : "xx/data/ott-qa/retriever/improved001/",
+    "reranker_marcomini_destination"   : "xx/data/ott-qa/reranking/improved001/",
+    
+    "reranker_roberta_source"      : "/data/ott-qa/retriever/",
+    "reranker_roberta_destination" : "/data/ott-qa/reranking/"
+}
+ 

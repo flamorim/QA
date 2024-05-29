@@ -1,230 +1,195 @@
 import torch
-import os, json
+import os
 import pickle
-import time
-# retriever
+import time, random
+import json
+import utils
+import pandas as pd
+
+import utils
+
 from sentence_transformers import SentenceTransformer, util
 
-def get_embeddings(file, device):
-    # Some local file to cache computed embeddings
 
-    start_time = time.time()
-    embedding_file = f'/data/ott-qa/embeddings/{file}'
-    # Check if embedding cache path exists
-    if not os.path.exists(embedding_file):
-        print(f'Embeddings nao encontrado em cache {file}')
-        print('abortando')
-        exit()
-    print(f'Embeddings cache {embedding_file} encontrado localmente...')
-    print("Aguarde carregando....")
-
-    with open(embedding_file, "rb") as fIn:
-            cache_data = pickle.load(fIn)
-            embeddings_dict = {
-            'tables_embedding'            : cache_data["embeddings"],
-            'tables_idx'                  : cache_data["tables_idx"],
-            'tables_uid'                  : cache_data["tables_uid"],
-            'tables_body'                 : cache_data["tables_body"],
-            'tables_url'                  : cache_data["tables_url"],
-            'tables_title'                : cache_data["tables_title"],
-            'tables_header'               : cache_data["tables_header"],
-            'tables_section_title'        : cache_data["tables_section_title"],
-            'tables_section_text'         : cache_data["tables_section_text"],
-            'tables_intro'                : cache_data["tables_intro"],
-            'tables_tokens_len'           : cache_data["tables_tokens_len"],
-            'tables_and_append_tokens_len': cache_data["tables_and_append_tokens_len"]}
-
-    print("")
-    print("Corpus loaded with {} tables / embeddings".format(len(cache_data["embeddings"])))
-    print(f'dimensao do vetor : {len(cache_data["embeddings"][0])}')
-    print(f'Table + sentences embeddings load took {(time.time() - start_time)} seconds')
+retriever_model_name = "deepset/all-mpnet-base-v2-table"  # para usar no nome dos embeddings salvos localmente
+path_local = "/modelos/deepset_all-mpnet-base-v2-table" #deepset_all-mpnet-base-v2-tablel.pth"
+device = "cpu"
+retriever_biencoder_model = SentenceTransformer(path_local, device=device)
 
 
+path_to_files = {
 
-    return embeddings_dict
-
-
-def cosine_similarity(inp_question,corpus_embeddings,num_candidates):
-
-    start_time = time.time()
-    question_embedding = retriever_biencoder_model.encode(inp_question, convert_to_tensor=True)
-    hits = util.semantic_search(question_embedding, corpus_embeddings, top_k=num_candidates)
-    hits = hits[0]  # Get the hits for the first query
-    #print("")
-    #print('---------------------------------------------------------------------------')
-    #print(f'Cosine-Similarity para top-{num_candidates} levou {(time.time() - start_time)} seconds')
-    #print(f'imprimindo Top 5 dos {num_candidates} hits with cosine-similarity:')
-    #for hit in hits[0:5]:
-    #    print("\t{:.3f}\t{}".format(hit["score"], corpus_tables[hit["corpus_id"]]))
-
-    return hits
+        #'retriever_source':      '/data/ott-qa/embeddings/',                    #  base line path
+        'retriever_source':      '/data/ott-qa/embeddings/improved/',             #  nome das colunas sem caracter especial
+        #'retriever_destination': '/data/ott-qa/retriever/',                     #  base line path
+        #'retriever_destination': '/data/ott-qa/retriever/improved001/',          #  nome das colunas sem caracter especial
+        #'retriever_destination': '/data/ott-qa/retriever/improved002/',         #  aplicado llm nas questions base line path
+        'retriever_destination': '/data/ott-qa/retriever/improved003/',         #  nome das colunas sem caracter especial e aplicado llm nas questions base line path
+        #'retriever_destination': '/data/ott-qa/embeddings/retriever/improved001', #   perguntas transformadas em sentencas pelo LLM - REFAZER
+        #'reranker_roberta_source' : '/data/ott-qa/retriever/',                     # retriever baseline
+        #'reranker_roberta_source' : '/data/ott-qa/retriever/improved002/',
+        #'reranker_roberta_destination' : '/data/ott-qa/reranking/',
+         }
 
 
-def main():
+def build_retriever(embedding_file, device ,run_improve_question, llm):
 
-    embeddings_file =  [#'mpnet_table_embeddings_cpu_512_514.pkl',                   # só a tabela
-                        'mpnet_table_header_embeddings_cpu_512_514.pkl',           # tabela mais a introdução do documento]
-                        'mpnet_table_intro_embeddings_cpu_512_514.pkl',          # tabela mais a o header da tabela
-                        'mpnet_table_section_title_embeddings_cpu_512_514.pkl',    # tabela mais uma passage da seção da tebale
-                        'mpnet_table_section_text_embeddings_cpu_512_514.pkl',   # tabela mais o titulo da tabela
-                        #'mpnet_table_embeddings_cpu_384_514.pkl'] #,    ## esses mais antigos nao tem o tables_and_append_tokens_len
-                        'mpnet_table_header_embeddings_cpu_384_514.pkl',
-                        'mpnet_table_intro_embeddings_cpu_384_514.pkl',
-                        'mpnet_table_section_title_embeddings_cpu_384_514.pkl',
-                        'mpnet_table_section_text_embeddings_cpu_384_514.pkl']
+    # dicionario com listas de todas as informacoes das tabelas
+    list_embedding_dict = utils.get_embeddings(embedding_file,device)
 
+    list_tables_uid            = list_embedding_dict['tables_uid']          # 8891 tabelas
+    #list_tables_tokens_len     = list_embedding_dict['tables_tokens_len']  # 8891 tokens len
+    list_tables_idx            = list_embedding_dict['tables_idx']          # 8891 tokens len
+    #list_tables_uid            = list_embedding_dict['tables_uid']         # 8891 tokens len
+    list_tables_url            = list_embedding_dict['tables_url']          # 8891 tokens len
+    list_tables_header         = list_embedding_dict['tables_header']       # 8891 tokens len
+    list_embeddings_tokens_len = list_embedding_dict['embedding_tokens_len']
+    list_tables_intro          = list_embedding_dict['tables_intro']
 
+    #list_tables_and_append_tokens_len = list_embedding_dict['tables_and_append_tokens_len']  # 8891
 
-
-
-    # 0 - Question
-    #inp_question = input("Entre com a question: ")
-    #num_candidates = int(input("Entre com numero para Top-K candidatos: "))
-    num_candidates = 100
-    # fazer aqui a leitura de todas as perguntas e a resposta
-
-    for embedding_file in embeddings_file:  # para cada tipo de embeddings feito
-
-        embedding_dict = get_embeddings(embedding_file,device)  # dicionario com listas de todas as info
-        list_tables_uid = embedding_dict['tables_uid']
-        list_tables_tokens_len = embedding_dict['tables_tokens_len']
-        list_tables_and_append_tokens_len = embedding_dict['tables_and_append_tokens_len']
-        
-        predictions = []
-        count = 0
-        
-        with open('/data/ott-qa/released_data/dev.json', 'r') as f:    # perguntas e respostas
-            data = json.load(f)
-        for qa in data:
-            start_time = time.time()
-
-            inp_question = qa['question']
-            answer_table_id = qa['table_id'].replace("'", "").replace('"', '').replace('(', '').replace(')', '').replace(',', '.')  # ground trhuth
-            
-            # 1 - calcula similaridade - so tabelas
-            hits = cosine_similarity(inp_question,embedding_dict['tables_embedding'], num_candidates)
-
-            end_time = time.time()
-
-            tables_uid = embedding_dict['tables_uid']
-
-            index_top_list = []
-            id_top_list    = []
-            score_top_list = []
-
-            for hit in hits:
-        #        print(f'id {hit["corpus_id"]} | {tables_uid[hit["corpus_id"]]} | score {hit["score"]}')
-                index_top_list.append(hit["corpus_id"])
-                id_top_list.append(tables_uid[hit["corpus_id"]])
-                score_top_list.append(hit["score"])
-                #print(f'id {hit["corpus_id"]} | | score {hit["score"]}')
-
-            ground_thruth_idx = embedding_dict['tables_uid'].index(answer_table_id)
-
-            table_tokens_len             = list_tables_tokens_len[ground_thruth_idx]
-            table_tokens_append_len  = list_tables_and_append_tokens_len[ground_thruth_idx]
-
-            top1 = top10 = top50 = top100 = False
-            if answer_table_id == id_top_list[0]:
-                top1 = True
-            elif answer_table_id in id_top_list[1:11]:
-                top10 = True
-            elif answer_table_id in id_top_list[11:51]:
-                top50 = True
-            elif answer_table_id in id_top_list[51:]:
-                top100 = True
-
-            top_tokens_len = []
-            top_tokens_append_len = []
-            for table in id_top_list:
-                indice_tabela = list_tables_uid.index(table)
-                top_tokens_len.append(list_tables_tokens_len[indice_tabela])
-                top_tokens_append_len.append(list_tables_and_append_tokens_len[indice_tabela])
+    dict_tables = {
+        'uid':        list_tables_uid,
+        'tokens_len': list_embeddings_tokens_len,
+        'idx':        list_tables_idx,
+        'url':        list_tables_url,
+        'table_intro': list_tables_intro
+    }   
+    df_tables = pd.DataFrame(dict_tables)
 
 
-        #    print('---------------------------------------------------------------------------')
+    # abrindo o dataset com as perguntas e respostas
+    predictions = []
+    count = 0
+    with open('/data/ott-qa/released_data/dev.json', 'r') as f:    # perguntas e respostas
+        data = json.load(f)
+    dataset = utils.convert_dataset(data)
 
-            new_data = {}
-            new_data = {'question_id'  : qa['question_id'],
-                        'question'     : qa['question'],
-                        'table_idx'    : ground_thruth_idx,
-                        'table_tokens_len' : table_tokens_len,
-                        'table_tokens_append_len': table_tokens_append_len,
-                        'table_id'     : qa['table_id'],
-                        'answer-text'  : qa['answer-text'],
-                        'top_tokens_len' : top_tokens_len, ##tables_tokens_len[tables_uid.index(answer_table_id)],
-                        'top_tokens_append_len' :top_tokens_append_len, ##tables_and_append_tokens_len[tables_uid.index(answer_table_id)],
-                        'top_index': index_top_list,
-                        'top_uid'  : id_top_list,
-                        'top_score': score_top_list,
-                        'top1'         : top1,
-                        'top10'        : top10,
-                        'top50'        : top50,
-                        'top100'       : top100,
-                        'time'         : end_time - start_time}
-            predictions.append(new_data)
-        #    if count == 5:
-        #        break
-        #    count+=1
-        out_put_file = "/data/ott-qa/output/" + embedding_file.replace(".pkl",".json")
-        out_put_file = out_put_file.replace("_embeddings_","_")
-        with open(out_put_file, "w") as arquivo_json:
-            json.dump(predictions, arquivo_json)
-        
-    exit()
-######################################################################
+    topk_len = 100  # tamanho da top-K
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '0'
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-print(device)
+    questions = dataset.question_txt.values.tolist()
 
+    #questions = questions[0:10]
 
-max_corpus_size = 0 # 500 #25  # 0 significa sem restricao
-#dataset_path = "data/wikipedia/simplewiki-2020-11-01.jsonl.gz"
-os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
-tables            = []
-tables_embedding  = []
-tables_sentence   = []
-tables_title      = []
-tables_file_name  = []
-tables_tokens_len = []
-
-inp_question = ''
-num_candidates = 3
-
-debug_mode = False #True
-download_models = False
-ConversationBuffer = True
-
-if __name__ == '__main__':
-    if debug_mode == True:
-        import debugpy
-        debugpy.listen(7011)
-        print("Waiting for debugger attach")
-        debugpy.wait_for_client()
-        os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
-    print('hello 2')
-    i = 1  # local para breakepoint do debuger
-    print('hello 3')
-
-    if download_models == True:
-        #retriever
-        embedding_path = "/QA/Bert/data/ott-qa/embeddings/"
-        retriever_model_name = "deepset/all-mpnet-base-v2-table"  # para usar no nome dos embeddings salvos localmente
-        retriever_biencoder_model = SentenceTransformer(retriever_model_name, device=device)  # para fazer o download
-    
+    # 1 - calcula similaridade - so tabelas
+    if run_improve_question == True:
+            df_teste = pd.DataFrame()
+            df_teste = pd.read_csv('/data/ott-qa/retriever/improved003/build_improve_questions.csv',sep=',')       
+            questions_opt = df_teste['questions_opt'].to_list()
+            questions_opt_status = df_teste['questions_opt_status'].to_list()
+            #questions_opt,questions_opt_status = llmquestions.build_improve_questions(questions, device='CPU', llm=llm)
+            hits = utils.cosine_similarity(retriever_biencoder_model, questions_opt, list_embedding_dict['embeddings'], topk_len)
     else:
-        #retriever
-        embedding_path = "/data/ott-qa/embeddings/"
-        retriever_model_name = "deepset/all-mpnet-base-v2-table"  # para usar no nome dos embeddings salvos localmente
-        path_local = "/modelos/deepset_all-mpnet-base-v2-table" #deepset_all-mpnet-base-v2-tablel.pth"
-        retriever_biencoder_model = SentenceTransformer(path_local, device=device)
+            hits = utils.cosine_similarity(retriever_biencoder_model, questions, list_embedding_dict['embeddings'], topk_len)
 
-    main()
+    df_hits = utils.convert_to_df(hits)  # retorna df com listas top-100 de idx e score 
+    dataset['top100_table_idx']   = df_hits['idx']
+    dataset['top100_table_score'] = df_hits['score']
+
+    # Inicializar uma lista para armazenar os tokens correspondentes
+    table_tokens_len_list = []
+    table_uid_list        = []
+    table_idx_gt = []
+    table_url_gt = []
+    table_header_gt = []
+    table_token_len_gt = []
+    top1_flag_list = []
+    top10_flag_list = []
+    top50_flag_list = []
+    top100_flag_list = []
+    table_intro_list = []
+
+    #df_hits.top1 = df_hits.top10 = df_hits.top50 = df_hits.top100 = False
+    index = 0
+    # Iterar sobre cada lista top100 do dataset de perguntas
+    for list_top100_table_idx, answer_table_uid in zip(dataset['top100_table_idx'],dataset['table_uid_gt']):
+            # Inicializar uma lista para armazenar os tokens correspondentes para a lista de id atual
+            tokens_len_top100 = []
+            table_uid_top100  = []
+            table_intro_top100= []
+            # Iterar sobre cada id na lista atual
+            for id_item in list_top100_table_idx:
+                # Encontrar o token correspondente na df_tables para o id atual
+                tokens_len = df_tables.loc[df_tables['idx'] == id_item, 'tokens_len'].values
+                uids       = df_tables.loc[df_tables['idx'] == id_item, 'uid'].values
+                intros     = df_tables.loc[df_tables['idx'] == id_item, 'table_intro'].values
+                
+                tokens_len_top100.append(tokens_len[0])
+                table_uid_top100.append(uids[0])
+                table_intro_top100.append(intros[0])
+
+            table_intro_list.append(table_intro_top100)
+            table_tokens_len_list.append(tokens_len_top100)
+            table_uid_list.append(table_uid_top100)
+            idx_gt = list_tables_uid.index(answer_table_uid) 
+            table_idx_gt.append(idx_gt)
+            table_url_gt.append(list_tables_url[idx_gt])
+            table_token_len_gt.append(table_tokens_len_list[index][0])  ### verificar
+            table_header_gt.append(list_tables_header[idx_gt])
+
+            #answer_table_id = dataset.loc[]
+            #answer_table_uid = lista_id['table_uid'].replace("'", "").replace('"', '').replace('(', '').replace(')', '').replace(',', '.').replace('*', '')  # ground trhuth
+            #answer_table_idx = dataset
+
+            if answer_table_uid == table_uid_top100[0]:
+                top1_flag_list.append(True)
+                top10_flag_list.append(False)
+                top50_flag_list.append(False)
+                top100_flag_list.append(False)
+            elif answer_table_uid in table_uid_top100[1:11]:   # ATENCAO PARA A ESTATISTICA
+                top1_flag_list.append(False)
+                top10_flag_list.append(True)
+                top50_flag_list.append(False)
+                top100_flag_list.append(False)
+            elif answer_table_uid in table_uid_top100[11:51]:
+                top1_flag_list.append(False)
+                top10_flag_list.append(False)
+                top50_flag_list.append(True)
+                top100_flag_list.append(False)
+            elif answer_table_uid in table_uid_top100[51:100]:
+                top1_flag_list.append(False)
+                top10_flag_list.append(False)
+                top50_flag_list.append(False)
+                top100_flag_list.append(True)
+            else:
+                top1_flag_list.append(False)
+                top10_flag_list.append(False)
+                top50_flag_list.append(False)
+                top100_flag_list.append(False)
+            index += 1
+            count += 1
+            print(count)
+            if run_improve_question == True:
+                dataset['question_opt']    = questions_opt
+                dataset['question_opt_status']    = questions_opt_status
+
+
+            if index % 50 == 0:
+                retriever_file = path_to_files['retriever_destination'] + embedding_file.split('/')[-1]
+                retriever_file = retriever_file.replace('.pkl','.csv')
+                retriever_file = retriever_file.replace('csv',f'{index}.csv')
+
+                #retriever_file = embedding_file.replace('/embeddings/','/retriever/').replace('.pkl','.csv')
+                #if run_improve_question == True:
+                #    retriever_file = retriever_file.replace('csv',f'{index}.csv')
+                #    retriever_file = retriever_file.replace('improved','improved003')
+                dataset.to_csv(retriever_file,sep=',',index=False)
+                print(f'salvo arquivo {retriever_file}')
 
 
 
+    dataset['table_idx_gt']    = table_idx_gt
+    dataset['table_url_gt']    = table_url_gt
+    dataset['table_token_len_gt'] = table_token_len_gt
+    dataset['table_header_gt'] = table_header_gt
+    dataset['top100_table_token_len'] = table_tokens_len_list   # conferir - top100
+    dataset['top100_table_uid']       = table_uid_list
+    dataset['top1_flag']       = top1_flag_list
+    dataset['top10_flag']      = top10_flag_list
+    dataset['top50_flag']      = top50_flag_list
+    dataset['top100_flag']     = top100_flag_list
+    dataset['top100_table_intro'] = table_intro_list
 
+    
 
-
-
+    return dataset

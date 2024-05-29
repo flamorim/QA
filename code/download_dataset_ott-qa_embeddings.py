@@ -7,6 +7,7 @@ import tqdm, json, os
 import pandas as pd
 import pickle
 import torch
+import re
 
 PATH_TO_JSON = '/data/ott-qa/traindev_tables.json'
 debug_mode = True
@@ -69,6 +70,8 @@ def create_dataset():
         columns = [col[0] for col in value["header"]]
         header = ', '.join(columns)
         tables_header.append(header)
+        #tables_header.append(columns)
+
 
         section_title = value['section_title']
         tables_section_title.append(section_title)
@@ -76,7 +79,7 @@ def create_dataset():
         section_text = value['section_text']
         tables_section_text.append(section_text)
 
-        uid = value['uid'].replace("'", "").replace('"', '').replace('(', '').replace(')', '').replace(',', '.')
+        uid = value['uid'].replace("'", "").replace('"', '').replace('(', '').replace(')', '').replace(',', '.').replace('*', '')
         tables_uid.append(uid)
 
         tables_idx.append(count)
@@ -114,18 +117,19 @@ def read_dataset_pickle():
 def _preprocess_tables(tables: list):
     processed = []
     # loop through all tables
-    count = 0
     for table in tables:
+        organized_columns = [sanitized_column_name(col) for col in table.columns]
+        table.columns = organized_columns
+
+        #print(table)  #.replace("")
         # convert the table to csv and
         processed_table = "\n".join([table.to_csv(index=False)])
         # add the processed table to processed list
         processed.append(processed_table)
-        #if count == 10:
-        #    break
-        #count +=1
+
     return processed
 
-def create_mpnet_embeddings_table_intro(device):
+def create_mpnet_embeddings_table_intro(device,max_sequency):
         corpus = []
         print('criando embedding das tabelas com passages')
         with open("/data/ott-qa/embeddings/new_dataset.pkl", "rb") as fIn:
@@ -142,9 +146,9 @@ def create_mpnet_embeddings_table_intro(device):
 
 
 
-        processed_tables = _preprocess_tables(tables_body)
+        processed_tables = _preprocess_tables(tables_body)                  ## alterado para pegar csv com nomes de colunas revisados
 
-        for (sentence,table) in list(zip(tables_intro, processed_tables)):
+        for (sentence,table) in list(zip(tables_intro, processed_tables)):  ## alterado para pegar csv com nomes de colunas revisados
             doc = sentence + '\n' + table
             corpus.append(doc)
 
@@ -152,11 +156,11 @@ def create_mpnet_embeddings_table_intro(device):
         retriever_biencoder_model = SentenceTransformer(retriever_model_name, device=device)
 
         # that's the sentence transformer como ele foi treinado = 384
-        retriever_biencoder_model.max_seq_length = 512
+        retriever_biencoder_model.max_seq_length = max_sequency
         max_seq = retriever_biencoder_model.max_seq_length
         
         # that's the underlying transformer o quanto ele pode ter = 514
-        max_pos = retriever_biencoder_model[0].auto_model.config.max_position_embeddings
+        max_pos = retriever_biencoder_model[0].auto_model.config.max_position_embeddings = 512
 
         corpus_embeddings = retriever_biencoder_model.encode(corpus, convert_to_tensor=True, show_progress_bar=True)
         print(f'Salvando localmente os embeddings feitos em {device}')
@@ -173,7 +177,8 @@ def create_mpnet_embeddings_table_intro(device):
             num_tokens = len(input_id)
             tables_and_append_tokens_len.append(num_tokens)
 
-        file_name = f'/data/ott-qa/embeddings/mpnet_table_intro_embeddings_{device}_{max_seq}_{max_pos}.pkl'
+        # fazendo com os nomes de colunas melhorado e salvando os novos embeddings
+        file_name = f'/data/ott-qa/embeddings/improved/mpnet_table_intro_embeddings_{device}_{max_seq}_{max_pos}.pkl'
         with open(file_name, "wb") as fOut:
             #pickle.dump({"tables": tables, "embeddings": corpus_embeddings, "tables_url": tables_url, "tables_sentence": tables_sentence, "tables_title": tables_title}, fOut)
             pickle.dump({
@@ -187,13 +192,13 @@ def create_mpnet_embeddings_table_intro(device):
                 "tables_section_title": tables_section_title,
                 "tables_section_text": tables_section_text,
                 "tables_intro": tables_intro,
-                "tables_tokens_len": tables_tokens_len,
-                "tables_and_append_tokens_len": tables_and_append_tokens_len}, fOut)
+                #"tables_tokens_len": tables_tokens_len,
+                "embedding_tokens_len": tables_and_append_tokens_len}, fOut)
 
 
-def create_mpnet_embeddings_table_header(device):
+def create_mpnet_embeddings_table_header(device,max_sequency):
         corpus = []
-        print('criando embedding das tabelas com passages')
+        print('criando embedding das tabelas com header novamente')
         with open("/data/ott-qa/embeddings/new_dataset.pkl", "rb") as fIn:
             cache_data = pickle.load(fIn)
             tables_idx           = cache_data["tables_idx"]
@@ -218,13 +223,13 @@ def create_mpnet_embeddings_table_header(device):
         retriever_biencoder_model = SentenceTransformer(retriever_model_name, device=device)
 
         # that's the sentence transformer como ele foi treinado = 384
-        retriever_biencoder_model.max_seq_length = 512
+        retriever_biencoder_model.max_seq_length = max_sequency
         max_seq = retriever_biencoder_model.max_seq_length
         
         # that's the underlying transformer o quanto ele pode ter = 512
-        max_pos = retriever_biencoder_model[0].auto_model.config.max_position_embeddings
+        max_pos = retriever_biencoder_model[0].auto_model.config.max_position_embeddings = 512
 
-        corpus_embeddings = retriever_biencoder_model.encode(corpus, convert_to_tensor=True, show_progress_bar=True)
+        corpus_embeddings = retriever_biencoder_model.encode(corpus, convert_to_tensor=True, batch_size=16, show_progress_bar=True)
         print(f'Salvando localmente os embeddings feitos em {device}')
 
         input_ids = retriever_biencoder_model.tokenizer(processed_tables)['input_ids']
@@ -254,11 +259,11 @@ def create_mpnet_embeddings_table_header(device):
                 "tables_section_title": tables_section_title,
                 "tables_section_text": tables_section_text,
                 "tables_intro": tables_intro,
-                "tables_tokens_len": tables_tokens_len,
-                "tables_and_append_tokens_len": tables_and_append_tokens_len}, fOut)
+                "embedding_tokens_len": tables_and_append_tokens_len}, fOut)
+                #"tables_and_append_tokens_len": tables_and_append_tokens_len}, fOut)
 
 
-def create_mpnet_embeddings_table_section_text(device):
+def create_mpnet_embeddings_table_section_text(device,max_sequency):
         corpus = []
         print('criando embedding das tabelas com passages')
         with open("/data/ott-qa/embeddings/new_dataset.pkl", "rb") as fIn:
@@ -278,18 +283,21 @@ def create_mpnet_embeddings_table_section_text(device):
         processed_tables = _preprocess_tables(tables_body)
 
         for (sentence,table) in list(zip(tables_section_text, processed_tables)):
-            doc = sentence + '\n' + table
+            if len(sentence) > 0:
+                doc = sentence + '\n' + table
+            else:
+                doc = table
             corpus.append(doc)
 
         retriever_model_name = "deepset/all-mpnet-base-v2-table"  # para usar no nome dos embeddings salvos localmente
         retriever_biencoder_model = SentenceTransformer(retriever_model_name, device=device)
 
         # that's the sentence transformer como ele foi treinado = 384
-        retriever_biencoder_model.max_seq_length = 512
+        retriever_biencoder_model.max_seq_length = max_sequency
         max_seq = retriever_biencoder_model.max_seq_length
         
         # that's the underlying transformer o quanto ele pode ter = 512
-        max_pos = retriever_biencoder_model[0].auto_model.config.max_position_embeddings
+        max_pos = retriever_biencoder_model[0].auto_model.config.max_position_embeddings = 512
 
         corpus_embeddings = retriever_biencoder_model.encode(corpus, convert_to_tensor=True, show_progress_bar=True)
         print(f'Salvando localmente os embeddings feitos em {device}')
@@ -320,10 +328,10 @@ def create_mpnet_embeddings_table_section_text(device):
                 "tables_section_title": tables_section_title,
                 "tables_section_text": tables_section_text,
                 "tables_intro": tables_intro,
-                "tables_tokens_len": tables_tokens_len,
-                "tables_and_append_tokens_len": tables_and_append_tokens_len}, fOut)
+                #"tables_tokens_len": tables_tokens_len,
+                "embedding_tokens_len": tables_and_append_tokens_len}, fOut)
 
-def create_mpnet_embeddings_table_section_title(device):
+def create_mpnet_embeddings_table_section_title(device,max_sequency):
         corpus = []
         print('criando embedding das tabelas com passages')
         with open("/data/ott-qa/embeddings/new_dataset.pkl", "rb") as fIn:
@@ -350,11 +358,11 @@ def create_mpnet_embeddings_table_section_title(device):
         retriever_biencoder_model = SentenceTransformer(retriever_model_name, device=device)
 
         # that's the sentence transformer como ele foi treinado = 384
-        retriever_biencoder_model.max_seq_length = 512
+        retriever_biencoder_model.max_seq_length = max_sequency
         max_seq = retriever_biencoder_model.max_seq_length
         
         # that's the underlying transformer o quanto ele pode ter = 512
-        max_pos = retriever_biencoder_model[0].auto_model.config.max_position_embeddings
+        max_pos = retriever_biencoder_model[0].auto_model.config.max_position_embeddings = 512
         #corpus = corpus[0:10]
         corpus_embeddings = retriever_biencoder_model.encode(corpus, convert_to_tensor=True, show_progress_bar=True)
         print(f'Salvando localmente os embeddings feitos em {device}')
@@ -387,11 +395,11 @@ def create_mpnet_embeddings_table_section_title(device):
                 "tables_section_title": tables_section_title,
                 "tables_section_text": tables_section_text,
                 "tables_intro": tables_intro,
-                "tables_tokens_len": tables_tokens_len,
-                "tables_and_append_tokens_len": tables_and_append_tokens_len}, fOut)
+                #"tables_tokens_len": tables_tokens_len,
+                "embedding_tokens_len": tables_and_append_tokens_len}, fOut)
 
 
-def create_mpnet_embeddings_table(device):
+def create_mpnet_embeddings_table(device,max_sequency):
         corpus = []
         print('criando embedding das tabelas')
         with open("/data/ott-qa/embeddings/new_dataset.pkl", "rb") as fIn:
@@ -419,11 +427,11 @@ def create_mpnet_embeddings_table(device):
         retriever_biencoder_model = SentenceTransformer(retriever_model_name, device=device)
 
         # that's the sentence transformer como ele foi treinado = 384
-        retriever_biencoder_model.max_seq_length = 512
+        retriever_biencoder_model.max_seq_length = max_sequency
         max_seq = retriever_biencoder_model.max_seq_length
         
         # that's the underlying transformer o quanto ele pode ter = 512
-        max_pos = retriever_biencoder_model[0].auto_model.config.max_position_embeddings
+        max_pos = retriever_biencoder_model[0].auto_model.config.max_position_embeddings = 512
 
         corpus_embeddings = retriever_biencoder_model.encode(processed_tables, convert_to_tensor=True, show_progress_bar=True)
         print(f'Salvando localmente os embeddings feitos em {device}')
@@ -433,7 +441,11 @@ def create_mpnet_embeddings_table(device):
         for input_id in input_ids:
             num_tokens = len(input_id)
             tables_tokens_len.append(num_tokens)
-        file_name = f'/data/ott-qa/embeddings/mpnet_table_embeddings_{device}_{max_seq}_{max_pos}.pkl'
+
+
+        # fazendo com os nomes de colunas melhorado e salvando os novos embeddings
+        file_name = f'/data/ott-qa/embeddings/improved/mpnet_table_embeddings_{device}_{max_seq}_{max_pos}.pkl'
+        #file_name = f'/data/ott-qa/embeddings/mpnet_table_embeddings_{device}_{max_seq}_{max_pos}.pkl'
 
         with open(file_name, "wb") as fOut:
             #pickle.dump({"tables": tables, "embeddings": corpus_embeddings, "tables_url": tables_url, "tables_sentence": tables_sentence, "tables_title": tables_title}, fOut)
@@ -449,8 +461,8 @@ def create_mpnet_embeddings_table(device):
                 "tables_section_title": tables_section_title,
                 "tables_section_text": tables_section_text,
                 "tables_intro": tables_intro,
-                "tables_tokens_len": tables_tokens_len,
-                "tables_and_append_tokens_len":tables_tokens_len}, fOut)  # só tenho a tabela
+                "embedding_tokens_len": tables_tokens_len}, fOut)
+#                "tables_and_append_tokens_len":tables_tokens_len}, fOut)  # só tenho a tabela
 
 
 ###################### TAPEX ####################
@@ -512,7 +524,7 @@ def verifica_dataset():
 
         #inp_question = qa['question']
         answer_table_id = qa['table_id']  # ground trhuth
-        csv_name = '/data/ott-qa/new_csv/' + answer_table_id.replace("'", "").replace('"', '').replace('(', '').replace(')', '').replace(',', '.')   + '.csv'
+        csv_name = '/data/ott-qa/new_csv/' + answer_table_id.replace("'", "").replace('"', '').replace('(', '').replace(')', '').replace(',', '.').replace('*', '')   + '.csv'
 
         if os.path.exists(csv_name):
             #print("ok")
@@ -545,7 +557,7 @@ def create_csv():
         df = pd.DataFrame(data, columns=columns)
         tables.append(df)
 
-        csv_name = '/data/ott-qa/new_csv/' + value["uid"].replace("'", "").replace('"', '').replace('(', '').replace(')', '').replace(',', '.')   + '.csv'
+        csv_name = '/data/ott-qa/new_csv/' + value["uid"].replace("'", "").replace('"', '').replace('(', '').replace(')', '').replace(',', '.').replace('*', '')   + '.csv'
         df.to_csv(csv_name,index=False)
         print(csv_name)
 
@@ -576,7 +588,7 @@ def create_question_answer():
         question        = value["question"]
         questions.append(question)
 
-        table_id       = value["table_id"].replace("'", "").replace('"', '').replace('(', '').replace(')', '').replace(',', '.')
+        table_id       = value["table_id"].replace("'", "").replace('"', '').replace('(', '').replace(')', '').replace(',', '.').replace('*', '')
         tables_id.append(table__id)
         
         question_postag = value["question_postag"]
@@ -595,6 +607,48 @@ def create_question_answer():
                      "tables_id": tables_id,
                      "questions_postag": questions_postag,
                      "answers_text": answers_text}, fOut)
+
+
+
+
+def sanitized_column_name(col_name):
+
+    return re.sub(r"\W+","-",col_name)
+
+
+def create_csv_organized_col():
+
+    with open(PATH_TO_JSON, 'r') as f:
+        json_data = json.load(f)
+
+    tables = []
+    tables_title = []
+    tables_sentence = []
+    tables_url = []
+    tables_uid = []
+    count = 0
+    for key,value in json_data.items():
+        columns = [col[0] for col in value["header"]]
+
+        organized_columns = [sanitized_column_name(col) for col in columns]
+
+        data = []
+        for entry in value["data"]:
+            row = [item[0] for item in entry]
+            data.append(row)
+
+        # Criar DataFrame
+        df = pd.DataFrame(data, columns=organized_columns)
+        tables.append(df)
+
+        csv_name = '/data/ott-qa/new_csv/organized_col/' + value["uid"].replace("'", "").replace('"', '').replace('(', '').replace(')', '').replace(',', '.').replace('*', '')   + '.csv'
+        df.to_csv(csv_name,index=False)
+        print(csv_name)
+
+        if ((count % 100) == 0):
+            print(count)
+        count +=1
+
 
 
 ###########################                    
@@ -620,13 +674,28 @@ if __name__ == '__main__':
     print(device)
 
     #create_dataset()
-    #read_dataset_pickle()
-    create_mpnet_embeddings_table("cpu")
-    #create_mpnet_embeddings_table_intro("cpu")
-    #create_mpnet_embeddings_table_header("cpu")
-    #create_mpnet_embeddings_table_section_text("cpu")
-    #create_mpnet_embeddings_table_section_title("cpu")
+    #create_csv_organized_col()
     
+    #read_dataset_pickle()
+    #create_mpnet_embeddings_table("cpu",384)          #refeitos, alterando os nomes dos campos do dict
+    create_mpnet_embeddings_table("cpu",512)
+    
+    #create_mpnet_embeddings_table_header("cpu",384)
+    #create_mpnet_embeddings_table_header("cpu",512)  ==> erro
+    
+    #create_mpnet_embeddings_table_section_text("cpu",384)
+    #create_mpnet_embeddings_table_section_text("cpu",512)
+        
+    #create_mpnet_embeddings_table_intro("cpu",384)
+    #create_mpnet_embeddings_table_intro("cpu",512)
+    
+    #create_mpnet_embeddings_table_section_title("cpu",384)
+    #create_mpnet_embeddings_table_section_title("cpu",512)
+
+    
+    print('fim')
+    
+
     #create_csv()
     #download_released_data_dir()
     #create_question_answer()

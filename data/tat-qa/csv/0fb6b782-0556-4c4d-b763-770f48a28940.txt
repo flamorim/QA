@@ -1,0 +1,3 @@
+Return on invested capital (ROIC)
+ROIC measures the after tax return on the total capital invested in the business. It is calculated as adjusted operating profit after tax divided by average invested capital.
+An analysis of the components is as follows:

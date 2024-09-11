@@ -1,0 +1,3 @@
+Reconciliation of net voyage revenues to voyage revenues:
+(1) Vessel Calendar Days is the total number of days the vessels were in our fleet.
+(2) Time Charter Equivalent ("TCE") Rate, results from Net Voyage Revenue divided by total TCE days.

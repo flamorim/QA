@@ -1,0 +1,12 @@
+3.3 Trade receivables and contract assets
+Recognition and measurement
+All trade and other receivables recognised as current assets are due for settlement within no more than 30 days for marketing fees and within one year for trail commission. Trade receivables are measured on the basis of amortised cost.
+It is the Group’s policy that all key partners who wish to trade on credit terms are subject to credit verification procedures.
+Allowance for credit losses
+iSelect applies the simplified approach and records lifetime expected losses on all trade receivables and contract assets. As a consequence, we do not track changes in credit risk, but recognise a loss allowance based on lifetime expected credit loss at each reporting date.
+iSelect calculates its provision utilising historical credit loss experience, adjusted for other relevant factors, i.e. aging of receivables, credit rating of the debtor, etc. Debts that are known to be uncollectable are written off when identified. If an impairment allowance has been recognised for a debt that becomes uncollectable, the debt is written off against the provision. If an amount is subsequently recovered, it is credited against profit or loss.
+As at 30 June 2019, expected credit losses are not considered material.
+Contract assets
+Contract assets are initially recognised for revenue earned from comparison, purchase support and referral services, as receipt of consideration is conditional on successful completion of a purchase between the customers and the product providers. Upon completion of sale and acceptance by the customer and the provider, invoices are issued to the provider for the amount receivable. These amounts invoiced are reclassified from contract assets to trade receivables. The trade receivable balance represents the Group’s unconditional right to receive the cash.
+Key estimates – allowance for credit losses
+We apply management judgement to estimate the expected credit losses for trade receivables and contract assets. Expected credit losses are assessed on an ongoing basis. Financial difficulties of the debtor, probability of default, delinquency in payments and credit ratings are utilised in this assessment.

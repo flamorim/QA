@@ -1,0 +1,4 @@
+Operating Leases and Other Contractual Commitments
+VMware leases office facilities and equipment under various operating arrangements. VMware’s minimum future lease commitments and other contractual commitments at January 31, 2020 were as follows (table in millions):
+(1) Amounts in the table above exclude legally binding minimum lease payments for leases signed but not yet commenced of $361 million, as well as expected sublease income.
+The amount of the future lease commitments after fiscal 2025 is primarily for the ground leases on VMware’s Palo Alto, California headquarter facilities, which expire in fiscal 2047. As several of VMware’s operating leases are payable in foreign currencies, the operating lease payments may fluctuate in response to changes in the exchange rate between the U.S. dollar and the foreign currencies in which the commitments are payable.

@@ -1,0 +1,10 @@
+11 Intangible assets
+(a) Intangible assets
+RIGHTS AND LICENCES
+Certain licences that NEXTDC possesses have an indefinite useful life and are carried at cost less impairment losses and are subject to impairment review at least annually and whenever there is an indication that it may be impaired.
+Other licences that NEXTDC acquires are carried at cost less accumulated amortisation and accumulated impairment losses. Amortisation is recognised on a straight-line basis over the estimated useful life. The estimated useful life and amortisation method are reviewed at the end of each annual reporting period.
+INTERNALLY GENERATED SOFTWARE
+Internally developed software is capitalised at cost less accumulated amortisation. Amortisation is calculated using the straight-line basis over the asset’s useful economic life which is generally two to three years. Their useful lives and potential impairment are reviewed at the end of each financial year.
+SOFTWARE UNDER DEVELOPMENT
+Costs incurred in developing products or systems and costs incurred in acquiring software and licenses that will contribute to future period financial benefits through revenue generation and/or cost reduction are capitalised to software and systems. Costs capitalised include external direct costs of materials and services and employee costs.
+Assets in the course of construction include only those costs directly attributable to the development phase and are only recognised following completion of technical feasibility and where the Group has an intention and ability to use the asset.

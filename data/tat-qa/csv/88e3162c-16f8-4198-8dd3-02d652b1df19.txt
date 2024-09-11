@@ -1,0 +1,17 @@
+The following table presents the approximate amount of federal, foreign and state operating loss carryforwards and federal tax credit carryforwards available to
+reduce future taxable income, along with the respective range of years that the operating loss and tax credit carryforwards would expired if not utilized:
+At March 31, 2019, certain of our U.S. and foreign subsidiaries in Brazil, France, Germany, Israel, Japan, Mexico and Korea had tax operating loss and tax credit carry
+forwards totaling approximately $263,836. There is a greater likelihood of not realizing the future tax benefits of these net operating losses and other deductible
+temporary differences in Brazil, Israel, China, and Korea since these losses and other deductible temporary differences must be used to offset future taxable income of
+those subsidiaries, which cannot be assured, and are not available to offset taxable income of other subsidiaries located in those countries. Accordingly, we have
+recorded valuation allowances related to the net deferred tax assets in these jurisdictions. Valuation allowances decreased $(12,101), and increased $317 and $6,812
+during the years ended March 31, 2017, 2018, and 2019, respectively, as a result of changes in the net operating losses of the subsidiaries or as a result of changes in
+foreign currency exchange rates in the countries mentioned above
+The decrease in valuation allowance during the year ended March 31, 2017 was also due to the reversal of valuation allowances of $5,530 related to the future
+utilization of NOLs totaling $15,878 at a Japanese subsidiary. The related tax benefits upon utilization of the Japanese NOLs expire eight years after they are generated,
+and they are not subject to annual utilization limitations. The realization of tax benefits due to the utilization of these NOLs could take an extended period of time to
+realize and are dependent upon the Japanese subsidiary’s continuing profitability, and some could expire prior to utilization. The increase in valuation allowance during
+the year ended March 31, 2019, was due to the addition of valuation allowances of $3,124 related to the Ethertronics acquisition and $1,763 related to capital and section
+1231 losses at AVX Corporation.
+The decrease in valuation allowance during the year ended March 31, 2017 was also due to the reversal of valuation allowances of $5,530 related to the future utilization of NOLs totaling $15,878 at a Japanese subsidiary. The related tax benefits upon utilization of the Japanese NOLs expire eight years after they are generated, and they are not subject to annual utilization limitations. The realization of tax benefits due to the utilization of these NOLs could take an extended period of time to realize and are dependent upon the Japanese subsidiary’s continuing profitability, and some could expire prior to utilization. The increase in valuation allowance during the year ended March 31, 2019, was due to the addition of valuation allowances of $3,124 related to the Ethertronics acquisition and $1,763 related to capital and section 1231 losses at AVX Corporation.
+Income taxes paid totaled $55,642, $66,354 and $75,640 during the years ended March 31, 2017, 2018 and 2019, respectively

@@ -1,0 +1,23 @@
+28 Parent entity financial information
+The individual financial statements for the parent entity show the following aggregate amounts:
+NEXTDC Limited acquired Asia Pacific Data Centre (“APDC”) on 18 October 2018 (refer to note 26). Following acquisition, the entities comprising APDC were subsequently wound up, and the underlying properties were transferred to a new entity established by NEXTDC - NEXTDC Holdings Trust No. 1 (refer to note 27). This resulted in the above loss in the parent entity on derecognition of its investment in APDC, while a corresponding gain was recorded in NEXTDC Holdings Trust No. 1 on transfer of the properties.
+(a) Reserves
+Due to the requirements of accounting standards, the loan provided by NEXTDC Limited (parent entity) to NEXTDC Share Plan Pty Ltd requires the loan in respect of the loan funded share plan to be recorded as an issue of treasury shares and a corresponding debit to equity (treasury share reserve).
+(b) Guarantees entered into by the parent entity in relation to the debts of its subsidiaries
+As at 30 June 2019, NEXTDC Limited did not have any guarantees in relation to the debts of subsidiaries.
+(c) Contingent liabilities of NEXTDC Limited (parent entity)
+The parent entity did not have any contingent liabilities as at 30 June 2019 or 30 June 2018. For information about guarantees given by the parent entity, please see above.
+(d) Contractual commitments by NEXTDC for the acquisition of property, plant and equipment
+Contractual commitments detailed in Note 17 relate to NEXTDC Limited as parent entity.
+(e) Determining the parent entity financial information
+The financial information for the parent entity has been prepared on the same basis as the consolidated financial statements, except as set out below.
+(i) Tax consolidation legislation
+NEXTDC Limited and its wholly-owned Australian controlled entities have implemented the tax consolidation legislation.
+The head entity, NEXTDC Limited, and the controlled entities in the tax consolidated Group account for their own current and deferred tax amounts. These tax amounts are measured as if each entity in the tax consolidated Group continues to be a stand-alone taxpayer in its own right.
+In addition to its own current and deferred tax amounts, NEXTDC Limited also recognises the current tax liabilities (or assets) and the deferred tax assets arising from unused tax losses and unused tax credits assumed from controlled entities in the tax consolidated Group.
+The entities have also entered into a tax funding agreement under which the wholly-owned entities fully compensate NEXTDC Limited for any current tax payable assumed and are compensated by NEXTDC Limited for any current tax receivable and deferred tax assets relating to unused tax losses or unused tax credits that are transferred to NEXTDC Limited under the tax consolidation legislation. The funding amounts are determined by reference to the amounts recognised in the wholly-owned entities’ financial statements.
+The amounts receivable/payable under the tax funding agreement are due upon receipt of the funding advice from the head entity, which is issued as soon as practicable after the end of each financial year. The head entity may also require payment of interim funding amounts to assist with its obligations to pay tax instalments.
+Assets or liabilities arising under tax funding agreements with the tax consolidated entities are recognised as current amounts receivable from or payable to other entities in the Group.
+Any difference between the amounts assumed and amounts receivable or payable under the tax funding agreement are recognised as a contribution to (or distribution from) wholly-owned tax consolidated entities.
+(ii) Investments in subsidiaries, associates and joint venture entities
+Investments in subsidiaries are accounted for at cost in the financial statements of NEXTDC Limited.

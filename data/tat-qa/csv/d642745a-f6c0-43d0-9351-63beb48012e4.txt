@@ -1,0 +1,6 @@
+Product Revenue by Segment
+The following table presents the breakdown of product revenue by segment (in millions, except percentages):
+Amounts may not sum and percentages may not recalculate due to rounding.
+Americas Product revenue in the Americas segment increased by 8%, driven by growth in the enterprise, public sector and commercial markets. These increases were partially offset by a product revenue decline in the service provider market. From a country perspective, product revenue increased by 9% in the United States, 26% in Mexico and 6% in Canada, partially offset by a product revenue decrease of 1% in Brazil.
+EMEA The increase in product revenue in the EMEA segment of 6% was driven by growth in the public sector and enterprise markets, partially offset by a decline in the service provider market. Product revenue in the commercial market was flat. Product revenue from emerging countries within EMEA increased by 9%, and product revenue for the remainder of the EMEA segment increased by 5%.
+APJC Product revenue in the APJC segment increased by 1%, driven by growth in the public sector and enterprise markets, partially offset by declines in the service provider and commercial markets. From a country perspective, product revenue increased by 9% in Japan and 5% in India, partially offset by a product revenue decrease of 16% in China.

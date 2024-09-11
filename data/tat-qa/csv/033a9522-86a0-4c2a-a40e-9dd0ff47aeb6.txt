@@ -1,0 +1,6 @@
+* Recast to conform to 2019 presentation.
+** Reclassified to conform to 2019 presentation. Refer to “Basis of
+Presentation” in note A, “Significant Accounting Policies,” for
+additional information.
+The following table presents external revenue for similar classes of products or services within the company’s reportable segments. Client solutions often include IBM software and systems and other suppliers’ products if the client solution requires it.
+For each of the segments that include services, Software-as-a-Service, consulting, education, training and other product-related services are included as services. For each of these segments, software includes product license charges and ongoing subscriptions.

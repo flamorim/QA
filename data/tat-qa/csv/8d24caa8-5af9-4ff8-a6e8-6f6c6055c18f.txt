@@ -1,0 +1,4 @@
+Net revenues by geographical region
+Percentage of revenue by geographic region as presented below is based on the billing location of the customer.
+Percentages may not add to 100% due to rounding.
+The Americas include U.S., Canada, and Latin America; EMEA includes Europe, Middle East, and Africa; APJ includes Asia Pacific and Japan.

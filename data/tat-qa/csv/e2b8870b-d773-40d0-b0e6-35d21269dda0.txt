@@ -1,0 +1,8 @@
+FRT Term Loan
+On October 25, 2019, we entered into a $23.4 million three-year credit facility loan agreement (the "FRT Term Loan") with HSBC Trinkaus & Burkhardt AG, Germany, to fund the acquisition of FRT GmbH, which we acquired on October 9, 2019. See Note 4 for further details of the acquisition.
+The FRT Term Loan bears interest at a rate equal to the Euro Interbank Offered Rate ("EURIBOR") plus 1.75 % per annum and will be repaid in quarterly installments of approximately $1.9 million plus interest beginning January 25, 2020.
+The obligations under the FRT Term Loan are fully and unconditionally guaranteed by FormFactor, Inc.
+The Credit Facility contains negative covenants customary for financing of this type, including covenants that place limitations on the incurrence of additional indebtedness, the creation of liens, the payment of dividends; dispositions; fundamental changes, including mergers and acquisitions; loans and investments; sale leasebacks; negative pledges; transactions with affiliates; changes in fiscal year; sanctions and anti-bribery laws and regulations, and modifications to charter documents in a manner materially adverse to the Lenders.
+The FRT Term Loan also contains affirmative covenants and representations and warranties customary for financing of this type.
+Future principal and interest payments on our term loans as of December 28, 2019, based on the interest rate in effect at that date were as follows (in thousands):
+(1) Represents our minimum interest payment commitments at 1.35% per annum for the FRT Term Loan and 3.71% per annum for the CMI Term Loan.

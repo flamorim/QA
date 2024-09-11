@@ -1,0 +1,11 @@
+15. Trade and other payables
+Trade and other payables mainly consist of amounts owed to suppliers that have been invoiced or are accrued and contract liabilities relating to consideration received from customers in advance. They also include taxes and social security amounts due in relation to the Group’s role as an employer. Derivative financial instruments with a negative market value are reported within this note.
+Accounting policies
+Trade payables are not interest-bearing and are stated at their nominal value.
+Notes: 1 Previously described as deferred income in the year ended 31 March 2018
+2 Items are measured at fair value and the valuation basis is level 2 classification, which comprises items where fair value is determined from inputs other than quoted prices that are observable for the asset or liability, either directly or indirectly
+3 Includes €823 million (2018: €nil) payable in relation to the irrevocable and non-discretionary share buyback programme announced in January 2019.
+The carrying amounts of trade and other payables approximate their fair value.
+Materially all of the €1,716 million recorded as current contract liabilities at 1 April 2018 was recognised as revenue during the year.
+Other payables included within non-current liabilities include €288 million (2018: €271 million) in respect of the re-insurance of a third party annuity policy related to the Vodafone and CWW Sections of the Vodafone UK Group Pension Scheme.
+The fair values of the derivative financial instruments are calculated by discounting the future cash flows to net present values using appropriate market interest rates and foreign currency rates prevailing at 31 March.

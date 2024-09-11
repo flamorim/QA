@@ -1,0 +1,3 @@
+The fair value of the Company’s service-based RSUs was calculated based on fair market value of the Company’s stock at the date of grant, discounted for dividends.
+The fair value of the Company’s market-based PRSUs granted during fiscal years 2019, 2018, and 2017 was calculated using a Monte Carlo simulation model at the date of the grant. This model requires the input of highly subjective assumptions, including expected stock price volatility and the estimated life of each award:
+As of June 30, 2019, the Company had $271.9 million of total unrecognized compensation expense related to all unvested RSUs granted which is expected to be recognized over a weighted-average remaining period of 2.2 years.

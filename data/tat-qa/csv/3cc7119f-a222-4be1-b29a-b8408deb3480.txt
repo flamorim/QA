@@ -1,0 +1,5 @@
+NET DEBT
+The term net debt does not have any standardized meaning under IFRS. Therefore, it is unlikely to be comparable to similar measures presented by other issuers.
+We define net debt as debt due within one year plus long-term debt and 50% of preferred shares, less cash and cash equivalents, as shown in BCE’s consolidated statements of financial position. We include 50% of outstanding preferred shares in our net debt as it is consistent with the treatment by certain credit rating agencies.
+We consider net debt to be an important indicator of the company’s financial leverage because it represents the amount of debt that is not covered by available cash and cash equivalents. We believe that certain investors and analysts use net debt to determine a company’s financial leverage.
+Net debt has no directly comparable IFRS financial measure, but rather is calculated using several asset and liability categories from the statements of financial position, as shown in the following table.

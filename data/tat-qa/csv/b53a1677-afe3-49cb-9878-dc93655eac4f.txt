@@ -1,0 +1,4 @@
+28. Contingent liabilities and legal proceedings
+Contingent liabilities are potential future cash outflows, where the likelihood of payment is considered more than remote, but is not considered probable or cannot be measured reliably.
+Notes: 1 Performance bonds require the Group to make payments to third parties in the event that the Group does not perform what is expected of it under the terms of any related contracts or commercial arrangements
+2 Other guarantees principally comprise Vodafone Group Plc’s guarantee of the Group’s 50% share of an AUD1.7 billion loan facility and a US$3.5 billion loan facility of its joint venture, Vodafone Hutchison Australia Pty Limited. The Group’s share of these loan balances is included in the net investment in joint venture (see note 12 “Investments in associates and joint arrangements”).

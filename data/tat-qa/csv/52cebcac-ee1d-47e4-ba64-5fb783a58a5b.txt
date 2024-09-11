@@ -1,0 +1,12 @@
+RESULTS OF OPERATIONS
+Revenue
+(1) Reflects client arrangements (term license, cloud, and maintenance) that are subject to renewal.
+We expect our revenue mix to continue to shift in favor of our subscription offerings, particularly cloud arrangements, which could result in slower total revenue growth in the near term. Revenue from cloud arrangements is generally recognized over the service period, while revenue from term and perpetual license arrangements is generally recognized upfront when the license rights become effective.
+Subscription revenue
+The increase in cloud revenue in 2019 reflects the shift in client preferences to cloud arrangements from other types of arrangements. The increase in term license revenue in 2019 was due to several large, multi-year term license contracts executed in 2019. This increase was partially offset by term license contracts with multi-year committed maintenance periods, where a greater portion of the contract value is allocated to maintenance.
+The increase in maintenance revenue in 2019 was primarily due to the continued growth in the aggregate value of the installed base of our software and strong renewal rates in excess of 90%
+Perpetual license
+The decrease in perpetual license revenue in 2019 reflects the shift in client preferences in favor of our subscription offerings, particularly cloud arrangements
+Consulting
+Our consulting revenue fluctuates depending upon the mix of new implementation projects we perform as compared to those performed by our enabled clients or led by our partners. See "Our consulting revenue is significantly dependent upon our consulting personnel implementing new license and cloud arrangements" in Item 1A of this Annual Report for additional information.
+The decrease in consulting revenue in 2019 was primarily due to a decrease in billable hours.

@@ -1,0 +1,4 @@
+Earnings Per Share
+Basic earnings per share is computed based on the weighted average number of shares outstanding during the period, excluding unvested restricted stock. Diluted earnings per share is computed based on the weighted average number of shares outstanding during the period increased by the effect of dilutive employee stock awards, including stock options, restricted stock awards and stock purchase plan contracts, using the treasury stock method.
+The following table presents information necessary to calculate basic and diluted earnings per share (in thousands, except per share data):
+There were 98,103, 103,547 and 505 potentially dilutive securities excluded from the dilutive share calculation for fiscal 2019, 2018 and 2017, respectively, as their effect was anti-dilutive.

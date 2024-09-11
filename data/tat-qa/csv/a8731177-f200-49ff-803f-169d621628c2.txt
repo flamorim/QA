@@ -1,0 +1,4 @@
+Note 11. Non-current assets - deferred tax assets
+Critical accounting judgements, estimates and assumptions
+Deferred tax assets are recognised for deductible temporary differences only if the Group considers it is probable that future taxable amounts will be available to utilise those temporary differences and losses. Calculation of future taxable amounts involve the use of assumptions and management judgments.
+A deferred tax asset can only be recorded for the portion of a potential benefit where utilisation is considered probable. The assessment of future taxable amounts involves the use of assumptions and management judgments. The Group has fully recognised a deferred tax asset of $79.3m in relation to assets previously transferred to USA. It is considered probable that there will be future taxable income in the USA to fully realise these temporary differences.

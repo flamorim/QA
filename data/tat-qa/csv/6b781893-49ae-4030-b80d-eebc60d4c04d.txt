@@ -1,0 +1,9 @@
+13. Other investments
+The Group holds a number of other listed and unlisted investments, mainly comprising managed funds, loan notes, deposits and government bonds.
+Accounting policies
+Other investments comprising debt and equity instruments are recognised and derecognised on a trade date where a purchase or sale of an investment is under a contract whose terms require delivery of the investment within the timeframe established by the market concerned, and are initially measured at fair value, including transaction costs.
+Debt securities that are held for collection of contractual cash flows where those cash flows represent solely payments of principal and interest are measured at amortised cost using the effective interest method, less any impairment. Debt securities that do not meet the criteria for amortised cost are measured at fair value through profit and loss.
+Equity securities are classified and measured at fair value through other comprehensive income, there is no subsequent reclassification of fair value gains and losses to profit or loss following derecognition of the investment. See note 1 “Basis of preparation” for previous measurement categories applicable to the comparative balances at 31 March 2018
+Debt securities include loan notes of US$nil (2018: US$2.5 billion (€2.0 billion) issued by Verizon Communications Inc. as part of the Group’s disposal of its interest in Verizon Wireless all of which is recorded within non-current assets and €0.8 billion (2018: €0.9 billion) issued by VodafoneZiggo Holding B.V.
+1  Items are measured at fair value and the valuation basis is level 2 classification, which comprises items where fair value is determined from inputs other than quoted prices that are observable for the asset or liability, either directly or indirectly.
+2  Items are measured at amortised cost and the carrying amount approximates fair value.

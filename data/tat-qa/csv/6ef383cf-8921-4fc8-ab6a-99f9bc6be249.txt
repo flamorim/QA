@@ -1,0 +1,4 @@
+Net Income (Loss) per Common Share
+Basic net income per share is based on the weighted average common and Class A shares outstanding. Diluted net income per share includes any dilutive effects of stock options outstanding and unvested restricted shares.
+Basic net income per share was calculated by dividing net income by the weighted-average number of common and Class A shares outstanding during the period. Diluted net income per share was calculated by dividing net income by the weighted-average number of common shares outstanding during the period plus the dilutive effects of stock options and unvested restricted shares. Due to the net loss in the year ended June 3, 2017 restricted shares in the amount of 131,292 were excluded from the calculation of diluted earnings per share because their inclusion would have been
+antidilutive. The computations of basic net income per share and diluted net income per share are as follows (in thousands):

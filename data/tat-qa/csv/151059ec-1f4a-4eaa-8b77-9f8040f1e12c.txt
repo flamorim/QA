@@ -1,0 +1,11 @@
+Operating assets and liabilities
+5 Trade and other receivables
+(a) Trade receivables
+(i) Classification as trade receivables
+Trade receivables are amounts due from customers for goods sold or services performed in the ordinary course of business. They are generally due for settlement within 30 - 60 days and therefore are all classified as current. Trade receivables are recognised initially at the amount of consideration that is unconditional unless they contain significant financing components, when they are recognised at fair value. The Group holds the trade receivables with the objective to collect the contractual cash flows and therefore measures them subsequently at amortised cost using the effective interest method.
+(ii) Fair values of trade and other receivables
+Due to the short-term nature of the trade and other receivables, their carrying amount is considered to be the same as their fair value.
+(iii) Impairment and risk exposure
+Information about the Group's impairment policies, calculation of loss allowance and exposure to credit risk, foreign currency risk and interest rate risk can be found in note 15.
+(b) Interest receivable
+Interest receivable relates to interest accrued on term deposits. Credit risk of this is assessed in the same manner as cash and cash equivalents which is detailed in note 15.

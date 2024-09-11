@@ -1,0 +1,7 @@
+Long-lived assets by geographic area, which primarily include property and equipment, net, as of the periods presented were as follows (table in millions):
+No individual country other than the U.S. accounted for 10% or more of these assets as of January 31, 2020 and February 1, 2019
+VMware’s product and service solutions are organized into three main product groups:
+• Software-Defined Data Center
+• Hybrid and Multi-Cloud Computing
+• Digital Workspace—End-User Computing
+VMware develops and markets product and service offerings within each of these three product groups. Additionally, synergies are leveraged across these three product areas. VMware’s products and service solutions from each of its product groups may also be bundled as part of an enterprise agreement arrangement or packaged together and sold as a suite. Accordingly, it is not practicable to determine revenue by each of the three product groups described above.

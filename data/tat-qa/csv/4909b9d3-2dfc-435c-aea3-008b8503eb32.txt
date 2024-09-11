@@ -1,0 +1,7 @@
+Derivative Instruments
+Derivative Instruments with Hedge Accounting Designation
+We utilize currency forward contracts that generally mature within 12 months to hedge our exposure to changes in currency exchange rates. Currency forward contracts are measured at fair value based on market-based observable inputs including currency exchange spot and forward rates, interest rates, and credit-risk spreads (Level 2). We do not use derivative instruments for speculative purposes.
+Cash Flow Hedges: We utilize cash flow hedges for our exposure from changes in currency exchange rates for certain capital expenditures. We recognized losses of $3 million and $17 million and gains of $15 million for 2019, 2018, and 2017, respectively, in accumulated other comprehensive income from the effective portion of cash flow hedges. Neither the amount excluded from hedge effectiveness nor the reclassifications from accumulated other comprehensive income to earnings were material in 2019, 2018, or 2017. The amounts from cash flow hedges included in accumulated other comprehensive income that are expected to be reclassified into earnings in the next 12 months were also not material.
+(1) Included in receivables – other.
+(2) Included in accounts payable and accrued expenses – other for forward contracts and in current debt for convertible notes settlement obligations.
+(3) Notional amounts of convertible notes settlement obligations as of August 29, 2019 and August 30, 2018 were 4 million and 3 million shares of our common stock, respectively.

@@ -1,0 +1,10 @@
+The three levels are described below:
+Level 1 Inputs – Unadjusted quoted prices in active markets for identical assets or liabilities that is accessible by the Company;
+Level 2 Inputs – Quoted prices in markets that are not active or financial instruments for which all significant inputs are observable, either directly or indirectly;
+Level 3 Inputs – Unobservable inputs for the asset or liability including significant assumptions of the Company and other market participants.
+The carrying amount of the Company’s financial assets and liabilities, such as cash, accounts payable and accrued expenses approximate their fair value because of
+the short maturity of those instruments. The carrying amount of the Company’s financial assets and liabilities, such as cash, accounts payable and accrued expenses approximate their fair value because of the short maturity of those instruments.
+Transactions involving related parties cannot be presumed to be carried out on an arm’s-length basis, as the requisite conditions of competitive, free-market dealings
+may not exist. Representations about transactions with related parties, if made, shall not imply that the related party transactions were consummated on terms equivalent to
+those that prevail in arm’s-length transactions unless such representations can be substantiated.
+The assets or liability’s fair value measurement within the fair value hierarchy is based upon the lowest level of any input that is significant to the fair value measurement. The following table provides a summary of financial instruments that are measured at fair value as of December 31, 2019.

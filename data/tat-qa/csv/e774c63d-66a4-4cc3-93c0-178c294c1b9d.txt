@@ -1,0 +1,5 @@
+Foreign Currency Analysis
+We generate a significant amount of our revenue in the United States, Germany, Japan, the United Kingdom and Canada
+The following table shows the impact of foreign exchange rate changes on our net revenue and total spend:
+(1) Please refer to the Glossary of Terms for the definitions of our constant currency growth rates.
+Changes in the value of the U.S. dollar may have a significant effect on net revenue, total spend, and income (loss) from operations in future periods. We use foreign currency contracts to reduce the exchange rate effect on a portion of the net revenue of certain anticipated transactions but do not attempt to completely mitigate the impact of fluctuations of such foreign currency against the U.S. dollar.

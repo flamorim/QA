@@ -1,0 +1,2 @@
+For a particular tax-paying component of the Company and within a particular tax jurisdiction, all current deferred tax liabilities and assets are offset and presented as a single amount, similarly to non-current deferred tax liabilities and assets. The Company does not offset deferred tax liabilities and assets attributable to different tax-paying components or to different tax jurisdictions.
+The net deferred tax assets are recorded in legal entities which have been historically profitable and are expected to be profitable in the next coming years.

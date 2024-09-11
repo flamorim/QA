@@ -1,0 +1,4 @@
+Note 2: Net Income Per Share
+Basic net income per share is computed using the weighted-average number of common shares outstanding for the period. Diluted net income per share is computed by adjusting the weighted-average number of common shares outstanding for the effect of dilutive potential common shares outstanding during the period. Potential common shares included in the diluted calculation consist of incremental shares issuable upon the exercise of outstanding stock options calculated using the treasury stock method.
+The following table sets forth the calculation of basic and diluted net income per share (in thousands, except per share amounts):
+For the years ended December 31, 2019 and 2018, options to purchase 200,000 and 200,000 shares of common stock, respectively, were not included in the computation of diluted net income per share because the effect would have been anti-dilutive.

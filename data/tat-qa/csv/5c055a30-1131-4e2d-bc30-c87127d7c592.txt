@@ -1,0 +1,6 @@
+Employee Share Purchase Plan (ESPP)
+The Company estimates the fair value of its ESPP share options on the date of grant using the Black-Scholes option-pricing model, which requires the use of highly subjective estimates and assumptions. The Company estimates the expected term of ESPP share options based on the length of each offering period, which is six months.
+The risk-free interest rate is based on a treasury instrument whose term is consistent with the expected life of the ESPP share option. Expected volatility is based on the Company’s historical volatility. The Company uses an expected dividend rate of zero as it currently has no history or expectation of paying dividends on its ordinary shares.
+The grant date fair value per ordinary share is based on the closing market value of its ordinary shares on the first day of each ESPP offering period. The first authorized offering period under the ESPP commenced on July 1, 2017.
+The fair value of each ESPP option grant was estimated using the Black-Scholes option-pricing model that used the following weighted-average assumptions:
+The weighted-average per share fair value of ESPP share options granted to employees during the years ended March 31, 2019 and 2018, was $9.58 and $6.41, respectively.

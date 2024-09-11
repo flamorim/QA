@@ -1,0 +1,8 @@
+Note 5. Fair Value of Financial Instruments
+The Company measures and reports certain cash equivalents, including money market funds and certificates of deposit, in addition to its long-term investments at fair value in accordance with the provisions of the authoritative accounting guidance that addresses fair value measurements. This guidance establishes a hierarchy for inputs used in measuring fair value that maximizes the use of observable inputs and minimizes the use of unobservable inputs by requiring that the most observable inputs be used when available
+The hierarchy is broken down into three levels based on the reliability of the inputs as follows:
+Level 1: Observable inputs that reflect unadjusted quoted prices in active markets for identical assets or liabilities
+Level 2: Other inputs, such as quoted prices for similar assets or liabilities, quoted prices for identical or similar assets or liabilities in inactive markets, or other inputs that are observable or can be corroborated by observable market data for substantially the full term of the asset or liability
+Level 3: Unobservable inputs that are supported by little or no market activity and that are based on management’s assumptions, including fair value measurements determined by using pricing models, discounted cash flow methodologies or similar techniques
+The financial assets carried at fair value were determined using the following inputs (in thousands):
+The Company’s other financial instruments, including accounts receivable, accounts payable, and other current liabilities, are carried at cost, which approximates fair-value due to the relatively short maturity of those instruments.

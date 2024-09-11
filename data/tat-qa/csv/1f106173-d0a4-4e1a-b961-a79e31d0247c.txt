@@ -1,0 +1,5 @@
+8. Earnings Per Share
+Basic earnings per share is computed in accordance with ASC 260, Earnings per Share, based on weighted average outstanding common shares. Diluted earnings per share is computed based on basic weighted average outstanding common shares adjusted for the dilutive effect of stock options, RSUs, and certain contingently issuable shares for which performance targets have been achieved.
+The following table reconciles the weighted average share amounts used to compute both basic and diluted earnings per share (in thousands):
+The diluted earnings per share computation excludes 1.8 million, 2.2 million, and 3.9 million options to purchase shares, RSUs, and contingently issuable shares during the years ended December 31, 2019, 2018, and 2017, respectively, as their effect would be antidilutive.
+Common stock outstanding as of December 31, 2019 and 2018, was 115,986,352 and 116,123,361, respectively.

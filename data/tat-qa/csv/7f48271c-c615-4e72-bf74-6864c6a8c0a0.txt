@@ -1,0 +1,3 @@
+12. Accumulated Other Comprehensive Loss
+Accumulated other comprehensive loss, net of taxes, consisted of the following:
+Reclassifications related to gains and losses on available-for-sale debt securities are included in "Interest and other expense, net". Refer to Note 3, "Financial Instruments" for the amount and location of reclassifications related to derivative instruments. Reclassifications of the defined benefit pension components of net periodic benefit cost are included in "Interest and other expense, net". Refer to Note 15, "Retirement Benefit Plans."

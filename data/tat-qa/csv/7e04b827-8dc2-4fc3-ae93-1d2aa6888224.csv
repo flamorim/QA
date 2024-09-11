@@ -1,0 +1,16 @@
+Unnamed-0,Balance-as-of,Unnamed-2,Adjustments-from,Unnamed-4,Balance-as-of-1
+,"March 31, 2018",ASC 606,ASU 2016-01,ASU 2016-16,"April 1, 2018"
+ASSETS,,,,,
+"Accounts receivable, net",$563.7,$340.1,$—,$—,$903.8
+Inventories,$476.2,$(5.1),$—,$—,$471.1
+Other current assets,$119.8,$17.2,$—,$—,$137.0
+Long-term deferred tax assets,$100.2,$(23.1),$—,"$1,579.4","$1,656.5"
+Other assets,$71.8,$—,$—,$(24.1),$47.7
+LIABILITIES,,,,,
+Accrued liabilities,$229.6,$404.2,$—,$—,$633.8
+Deferred income on shipments to distributors,$333.8,$(333.8),$—,$—,$—
+Long-term deferred tax liability,$205.8,$16.8,$—,$(1.1),$221.5
+Other long-term liabilities,$240.9,$—,$—,$(1.7),$239.2
+STOCKHOLDERS' EQUITY,,,,,
+Accumulated other comprehensive loss,$(17.6),$—,$(1.7),$—,$(19.3)
+Retained earnings,"$1,397.3",$241.9,$1.7,"$1,558.1","$3,199.0"

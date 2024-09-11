@@ -1,0 +1,8 @@
+7 Employee benefits
+Pension plans
+The Company is accounting for pension costs in accordance with International Accounting Standard 19.
+The disclosures shown here are in respect of the Company’s defined benefit obligations. Other plans operated by the Company were defined contribution plans.
+The total expense relating to the Company’s defined contribution pension plans in the current year was £0.7m (2018: £0.6m).
+At 31st December 2019 the post-retirement mortality assumptions in respect of the Company Defined Benefit Scheme follows 85%/96% (male/female) of SAPS S2, CMI 2017 projections with a long term trend of 1.25% p.a. At 31st December 2018 the postretirement mortality assumptions in respect of the Company Defined Benefit Scheme follows 85% of SAPS S2 Light base table for males and 96% of SAPS S2 base table for females with CMI Core Projection Model 2016 improvements commencing in 2007, subject to a 1.25% p.a. long-term trend. These assumptions are regularly reviewed in light of scheme-specific experience and more widely available statistics.
+The financial assumptions used at 31st December were:
+The assumptions used by the actuary are the best estimates chosen from a range of possible actuarial assumptions, which due to the timescale covered, may not necessarily be borne out in practice.

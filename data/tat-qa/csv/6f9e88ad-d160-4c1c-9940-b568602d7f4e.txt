@@ -1,0 +1,4 @@
+Non-marketable investments
+Non-marketable equity securities are measured at fair value using market data, such as publicly available financing round valuations. Financial information of private companies may not be available and consequently we will estimate the fair value based on the best available information at the measurement date.
+The following table presents the reconciliations of Level 3 financial instrument fair values:
+There were transfers out from Level 3 due to initial public offerings of the respective investees during fiscal year 2019. There were no transfers between levels during fiscal year 2018.

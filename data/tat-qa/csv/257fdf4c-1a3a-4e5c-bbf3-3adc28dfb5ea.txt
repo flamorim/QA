@@ -1,0 +1,4 @@
+* Recast to reflect segment changes.
+** 2019 results were impacted by Red Hat purchase accounting and acquisition-related activity.
+The Cloud & Cognitive Software gross profit margin decreased 0.9 points to 76.7 percent in 2019 compared to the prior year. The gross profit margin decline was driven by the purchase price accounting impacts from the Red Hat acquisition.
+Pre-tax income of $7,952 million decreased 10.5 percent compared to the prior year with a pre-tax margin decline of 4.4 points to 30.6 percent which reflects the acquisition of Red Hat, ongoing investments in key strategic areas and lower income from IP partnership agreements.

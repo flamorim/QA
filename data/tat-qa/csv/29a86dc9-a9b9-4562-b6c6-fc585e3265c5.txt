@@ -1,0 +1,4 @@
+ADVANCED ENERGY INDUSTRIES, INC. NOTES TO CONSOLIDATED FINANCIAL STATEMENTS – (continued) (in thousands, except per share amounts)
+NOTE 6. EARNINGS PER SHARE
+Basic earnings per share (“EPS”) is computed by dividing income available to common stockholders by the weighted-average number of common shares outstanding during the period. The computation of diluted EPS is similar to the computation of basic EPS except that the denominator is increased to include the number of additional common shares that would have been outstanding (using the if-converted and treasury stock methods), if our outstanding stock options and restricted stock units had been converted to common shares, and if such assumed conversion is dilutive.
+The following is a reconciliation of the weighted-average shares outstanding used in the calculation of basic and diluted earnings per share for the years ended December 31, 2019, 2018 and 2017:

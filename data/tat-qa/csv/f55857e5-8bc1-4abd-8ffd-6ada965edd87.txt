@@ -1,0 +1,6 @@
+Revenues
+Revenues for our reportable segments were as follows:
+The increase in Semiconductor Test revenues of $60.2 million, or 4%, from 2018 to 2019 was driven primarily by an increase in semiconductor tester sales for 5G infrastructure and image sensors and higher service revenue, partially offset by a decrease in sales in the automotive and analog test segments.
+The increase in Industrial Automation revenues of $36.6 million, or 14%, from 2018 to 2019 was primarily due to higher demand for collaborative robots. The MiR acquisition was completed in April 2018.
+The increase in System Test revenues of $71.4 million, or 33%, from 2018 to 2019 was primarily due to higher sales in Storage Test of 3.5” hard disk drive testers, higher sales in Defense/Aerospace test instrumentation and systems, and higher sales in Production Board Test from higher 5G demand.
+The increase in Wireless Test revenues of $25.3 million, or 19%, from 2018 to 2019 was primarily due to higher demand for millimeter wave and cellular test products driven by new wireless standards and 5G, partially offset by lower sales in connectivity test products and services.

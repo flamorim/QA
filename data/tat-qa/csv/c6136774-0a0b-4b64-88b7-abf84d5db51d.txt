@@ -1,0 +1,4 @@
+NOTE 14-INFORMATION CONCERNING PRODUCT LINES, GEOGRAPHIC INFORMATION, ACCOUNTS RECEIVABLE AND REVENUE CONCENTRATION
+The Company identifies its business segments based on business activities, management responsibility and geographic location. For all periods presented, the Company operated in a single reportable business segment.
+The following is a breakdown of revenue by product family (in thousands):
+(1) New products include all products manufactured on 180 nanometer or smaller semiconductor processes, eFPGA IP license, QuickAI and SensiML AI software as a service (SaaS) revenues. Mature products include all products produced on semiconductor processes larger than 180 nanometer.

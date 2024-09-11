@@ -1,0 +1,9 @@
+Employee Stock Purchase Plan
+The weighted average estimated fair value, as defined by the amended authoritative guidance, of rights issued pursuant to the Company’s ESPP during 2019, 2018 and 2017 was $4.28, $5.18 and $6.02, respectively. Sales under the ESPP were 24,131 shares of common stock at an average price per share of $9.76 for 2019, 31,306 shares of common stock at an average price per share of $15.40 for 2018, and 38,449 shares of common stock at an average price per share of $12.04 for 2017.
+As of December 29, 2019, 62,335 shares under the 2009 ESPP remained available for issuance. The Company recorded compensation expenses related to the ESPP of $60,000, $205,000 and $153,000 in 2019, 2018 and 2017, respectively.
+The fair value of rights issued pursuant to the Company’s ESPP was estimated on the commencement date of each offering period using the following weighted average assumptions:
+The methodologies for determining the above values were as follows:
+• Expected term: The expected term represents the length of the purchase period contained in the ESPP.
+• Risk-free interest rate: The risk-free interest rate assumption is based upon the risk-free rate of a Treasury Constant Maturity bond with a maturity appropriate for the term of the purchase period.
+• Volatility: The Company determines expected volatility based on historical volatility of the Company’s common stock for the term of the purchase period.
+• Dividend Yield: The expected dividend assumption is based on the Company’s intent not to issue a dividend under its dividend policy.

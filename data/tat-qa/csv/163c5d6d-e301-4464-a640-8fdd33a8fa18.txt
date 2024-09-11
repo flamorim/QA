@@ -1,0 +1,6 @@
+BENEFIT OBLIGATION AND PLAN ASSETS FOR PENSION BENEFIT PLANS
+The vested benefit obligation for a defined-benefit pension plan is the actuarial present value of the vested benefits to which the employee is currently entitled based on the employee’s expected date of separation or retirement.
+1 The projected benefit obligation was approximately 35% in the U.S. and 65% outside of the U.S. as of December 28, 2019 and December 29, 2018.
+2 The fair value of plan assets was approximately 55% in the U.S. and 45% outside of the U.S. as of December 28, 2019 and December 29, 2018.
+3 The accumulated other comprehensive loss (income), before tax, was approximately 35% in the U.S. and 65% outside of the U.S. as of December 28, 2019 and December 29, 2018.
+Changes in actuarial gains and losses in the projected benefit obligation are generally driven by discount rate movement. We use the corridor approach to amortize actuarial gains and losses. Under this approach, net actuarial gains or losses in excess of 10% of the larger of the projected benefit obligation or the fair value of plan assets are amortized on a straight-line basis.

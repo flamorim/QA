@@ -1,0 +1,4 @@
+Basic earnings per share is computed on the basis of the weighted-average number of shares of common stock outstanding during the period. Diluted earnings per share is computed on the basis of the weighted-average number of shares of common stock outstanding plus the effect of dilutive potential common shares outstanding during the period using the treasury stock method. Dilutive potential common shares include outstanding stock options and stock awards.
+* Includes a charge of $2.0 billion or $2.23 of basic and diluted earnings per share in 2018 associated with U.S. tax reform.
+Actual shares outstanding at December 31, 2019 and 2018 were 887.1 million and 892.5 million, respectively. The year-to- year decrease was primarily the result of the common stock repurchase program. The average number of common shares
+outstanding assuming dilution was 23.5 million shares lower in 2019 versus 2018

@@ -1,0 +1,9 @@
+Revenue
+Revenue was $5,517.9 million and $5,878.3 million for 2019 and 2018, respectively. The decrease of $360.4 million, or 6.1% was primarily attributable to an 8.2%, 4.8% and 1.5% decrease in revenue in PSG, ASG and ISG, respectively, which is further explained below. Revenue by reportable segment for each were as follows (dollars in millions):
+(1) Certain of the amounts may not total due to rounding of individual amounts.
+Revenue from PSG
+Revenue from PSG decreased by $249.9 million, or approximately 8%, which was due to a combination of a decrease in volume of products sold and a competitive pricing environment. The revenue in our Protection and Signal Division, Integrated Circuits Division, and High Power Division, decreased by $106.5 million, $96.6 million and $91.5 million, respectively. This was partially offset by an increase in revenue of $30.1 million and $15.0 million from our Foundry Services and Power Mosfet Division, respectively.
+Revenue from ASG
+Revenue from ASG decreased by $98.9 million, or approximately 5%, which was also due to a combination of a decrease in volume of products sold and a competitive pricing environment. The revenue in our Industrial and Offline Power Division and our Signal Processing, Wireless and Medical Division, decreased by $100.5 million and $56.4 million, respectively. This was partially offset by $84.8 million of revenue from Quantenna, which was acquired during 2019.
+Revenue from ISG
+Revenue from ISG decreased by $11.6 million, or 1.5%, which was due to a decrease in our Industrial Sensing Division revenue of $20.8 million, primarily due to decreased demand, which was partially offset by an increase in revenue in other divisions.

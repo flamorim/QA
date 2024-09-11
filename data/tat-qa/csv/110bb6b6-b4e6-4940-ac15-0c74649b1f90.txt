@@ -1,0 +1,15 @@
+Fair Value Disclosures
+Under the fair value standards fair value is based on the exit price and defined as the price that would be received to sell an asset or transfer a liability in an orderly transaction between market participants at the measurement date. The fair value measurement should reflect all the assumptions that market participants would use in pricing an asset or liability. A fair value hierarchy is established in the authoritative guidance outlined in three levels ranking from Level 1 to level 3 with Level 1 being the highest priority.
+Level 1: observable inputs that reflect quoted prices (unadjusted) for identical assets or liabilities in active markets
+Level 2: inputs other than quoted prices included in Level 1 that are observable for the asset or liability either directly or indirectly
+Level 3: unobservable inputs (e.g., a reporting entity’s or other entity’s own data)
+The Company had no assets or liabilities measured at fair value on a recurring (except our pension plan assets, see Note 15) or
+non-recurring basis as of September 30, 2019 or September 30, 2018.
+To estimate fair value of the financial instruments below quoted market prices are used when available and classified within Level 1. If this data is not available, we use observable market based inputs to estimate fair value, which are classified within Level 2. If the preceding information is unavailable, we use internally generated data to estimate fair value which is classified within Level 3.
+Cash and cash equivalents
+Carrying amount approximated fair value
+Accounts and long term receivable with original maturity over one year
+Fair value was estimated by discounting future cash flows based on the current rate with similar terms.
+Note payable
+Fair value was estimated based on quoted market prices.
+Fair value of accounts receivable with an original maturity of one year or less and accounts payable was not materially different from their carrying values at September 30, 2019, and 2018.

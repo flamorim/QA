@@ -1,0 +1,4 @@
+Net Loss per Share
+The Company applies the two-class method to calculate its basic and diluted net loss per share as both classes of its voting shares are participating securities with equal participation rights and are entitled to receive dividends on a share for share basis.
+The following table summarizes the reconciliation of the basic weighted average number of shares outstanding and the diluted weighted average number of shares outstanding:
+In the years ended December 31, 2019 and 2018, the Company was in a loss position and therefore diluted loss per share is equal to basic loss per share.

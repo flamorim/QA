@@ -1,0 +1,6 @@
+Underlying effective tax rate
+The underlying effective tax rate is calculated by dividing taxation excluding the tax impact of non-underlying items by profit before tax excluding the impact of non-underlying items and share of net profit/(loss) of joint ventures and associates. This measure reflects the underlying tax rate in relation to profit before tax excluding non-underlying items before tax and share of net profit/(loss) of joint ventures and associates.
+Tax impact on non-underlying items within operating profit is the sum of the tax on each non-underlying item, based on the applicable country tax rates and tax treatment. This is shown in the table:
+(a) Restated following adoption of IFRS 16. See note 1 and note 24 for further details.
+(b) Refer to note 3 for further details on these items.
+(c) Excludes €3 million (2018: €32 million) gain on disposal of spreads business by the joint venture in Portugal which is included in the share of net profit/(loss) of joint ventures and associates line. Including the gain, total non-underlying items not in operating profit but within net profit before tax is €35 million (2018: €154 million). See note 3.

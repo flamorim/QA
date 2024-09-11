@@ -1,0 +1,6 @@
+Class A
+As of December 31, 2019 and 2018, there were no weighted average shares of unvested Class A restricted common stock shares considered to be participating securities.
+The computation of diluted earnings per share assumes the issuance of common stock for all potentially dilutive stock options and restricted stock units not classified as participating securities.
+As of December 31, 2019, there were 1,718,865 shares of Class A restricted stock units and 1,478,756 Class A stock options outstanding and considered to be potentially dilutive securities. As of December 31, 2018, there were 912,315 shares of Class A restricted stock units and 866,011 Class A stock options outstanding and considered to be potentially dilutive securities.
+The components of the calculation of basic earnings per share and diluted earnings per share are as follows:
+For annual earnings per share calculations, there were 407,120 and 651,154 dilutive equity awards outstanding for the years ended December 31, 2019 and 2018. Awards of 920,845 and 469,112 shares of common stock for 2019 and 2018, respectively, were not included in the computation of diluted earnings per share because inclusion of these awards would be anti-dilutive.

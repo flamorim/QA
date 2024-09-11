@@ -1,0 +1,7 @@
+Note 12. Current liabilities - trade and other payables
+Accounting policy for trade and other payables 
+
+These amounts represent liabilities for goods and services provided to the Group prior to the end of the financial year and which are unpaid. Due to their short-term nature they are measured at amortised cost and are not discounted. The amounts are unsecured and are usually paid within 30 days of recognition.
+Deferred consideration 
+
+The payable represents the obligation to pay consideration following the acquisition of a business or assets and is deferred based on passage of time. It is measured at the present value of the estimated liability.

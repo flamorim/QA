@@ -1,0 +1,4 @@
+(13) (Loss) Earnings Per Common Share
+Basic and diluted (loss) earnings per common share for the years ended December 31, 2019, 2018 and 2017 were calculated as follows:
+(1) For the year ended December 31, 2019 and December 31, 2018, we excluded from the calculation of diluted loss per share 3.0 million shares and 4.6 million shares, respectively, potentially issuable under incentive compensation plans or convertible securities, as their effect, if included, would have been anti-dilutive.
+Our calculation of diluted (loss) earnings per common share excludes shares of common stock that are issuable upon exercise of stock options when the exercise price is greater than the average market price of our common stock. We also exclude unvested restricted stock awards that are antidilutive as a result of unrecognized compensation cost. Such shares were 6.8 million, 2.7 million and 4.7 million for 2019, 2018 and 2017, respectively.

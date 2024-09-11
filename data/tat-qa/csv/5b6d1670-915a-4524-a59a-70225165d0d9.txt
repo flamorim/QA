@@ -1,0 +1,5 @@
+10.5. Intangible assets
+Impairment testing of goodwill
+Goodwill has been allocated to the listed group (NSR). Management have determined that the listed group, which is considered one operating segment (see note 4), is the appropriate CGU against which to allocate these intangible assets owing to the synergies arising from combining the portfolios of the Group.
+The recoverable amount of the listed group has been determined based on the fair value less costs of disposal method using the fair value quoted on an active market. As at 1 July 2019, NSR had 773,343,956 stapled securities quoted on the Australian Securities Exchange at $1.745 per security providing a market capitalisation of $1,349.5m.
+This amount is in excess of the carrying amount of the Group’s net assets at 30 June 2019 which includes the contract for future issue of equity recognised as contributed equity within the statement of financial position at this date (see note 13). Had the security price decreased by 2.5% the market capitalisation would still have been in excess of the carrying amount.

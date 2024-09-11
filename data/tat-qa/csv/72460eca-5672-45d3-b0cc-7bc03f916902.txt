@@ -1,0 +1,9 @@
+Fair values of financial assets and financial liabilities
+Fair values of financial assets and liabilities at 31st December 2019 are not materially different from book values due to their size or the fact that they were at short-term rates of interest. Fair values have been assessed as follows:
+• Derivatives Forward exchange contracts are marked to market by discounting the future contracted cash flows using readily available market data
+• Interest-bearing loans and borrowings Fair value is calculated based on discounted expected future principal and interest cash flows.
+• Lease liabilities The fair value is estimated as the present value of future cash flows, discounted at the incremental borrowing rate for the related geographical location unless the rate implicit in the lease is readily determinable.
+• Trade and other receivables/payables For receivables/payables with a remaining life of less than one year, the notional amount is deemed to reflect the fair value.
+The following table compares amounts and fair values of the Group’s financial assets and liabilities:
+There are no other assets or liabilities measured at fair value on a recurring or non-recurring basis for which fair value is disclosed.
+Derivative financial instruments are measured at fair value. Fair value of derivative financial instruments are calculated based on discounted cash flow analysis using appropriate market information for the duration of the instruments.

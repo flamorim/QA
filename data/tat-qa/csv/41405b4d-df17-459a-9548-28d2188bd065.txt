@@ -1,0 +1,8 @@
+VMware and Pivotal Stock Options
+The following table summarizes stock option activity for VMware and Pivotal since February 3, 2017 (shares in thousands):
+(1) The weighted-average exercise price of options outstanding as of February 1, 2019 reflects the adjustments to the options as a result of the Special Dividend.
+(2) Stock option granted under the VMware equity plan includes 0.6 million options issued for unvested options assumed as part of the Pivotal acquisition.
+(3) Stock options forfeited under the Pivotal equity plan includes 6.2 million options converted to VMware options as part of the Pivotal acquisition, using a conversion ratio of 0.1.
+(4) Stock options exercised under the Pivotal equity plan includes 22.4 million of vested options that were settled in cash as part of the Pivotal acquisition.
+The above table includes stock options granted in conjunction with unvested stock options assumed in business combinations. As a result, the weighted-average exercise price per share may vary from the VMware stock price at time of grant
+The stock options outstanding as of January 31, 2020 had an aggregate intrinsic value of $239 million based on VMware’s closing stock price as of January 31, 2020.

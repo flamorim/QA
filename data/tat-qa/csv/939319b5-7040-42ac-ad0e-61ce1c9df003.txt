@@ -1,0 +1,6 @@
+The Company is holding the following currency derivatives designated as hedging instruments:
+Hedge ratio is 1:1 and changes in forward rate have been designated as the hedged risk. The change in the fair value of the hedging instrument is compared with the change in fair value of the hedged item, and the lower amount
+is taken to OCI. If the change in fair value of the hedging instrument is higher, then the excess change in fair value is considered ineffective hedging and recorded in net foreign exchange gains and losses. Upon recognition of the
+hedged net sales, the cumulative amount in hedging reserve is released in the OCI as a reclassification adjustment and recognized in net sales.
+See note E1, “Equity” for movement in the cash flow hedge reserve. No hedged net sales were recognized in 2019, hence no amount was released from hedging reserve in the OCI. No hedge ineffectiveness was recognized in
+the income statement in 2019.

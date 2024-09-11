@@ -1,0 +1,6 @@
+Share Options
+The fair value of equity-settled share options granted is measured as at the date of grant using a Black-Scholes model, taking into account the terms and conditions upon which the options were granted.
+The following table illustrates the weighted average inputs into the Black-Scholes model in the year:
+The weighted average fair value of options granted during the year was $ cents 220.53 (2018: $ cents 185.33).
+The expected volatility reflects the assumption that the historical share price volatility is indicative of future trends, which may not necessarily be the actual outcome. An increase in the expected volatility will increase the estimated fair value.
+The expected life of the options is based on historical data and is not necessarily indicative of exercise patterns that may occur. The expected life used in the model has been adjusted, based on the Director’s best estimate, taking into account the effects of exercise restrictions, non-transferability and behavioural considerations. An increase in the expected life will increase the estimated fair value.

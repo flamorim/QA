@@ -1,0 +1,5 @@
+SHARE-BASED PAYMENTS (continued)
+(a) Share option schemes (continued) (iii) Fair value of option
+The directors of the Company have used the Binomial Model to determine the fair value of the options as at the respective grant dates, which is to be expensed over the relevant vesting period. The weighted average fair value of options granted during the year ended 31 December 2019 was HKD123.82 per share (equivalent to approximately RMB106.09 per share) (2018: HKD127.43 per share (equivalent to approximately RMB103.46 per share)).
+Other than the exercise price mentioned above, significant judgment on parameters, such as risk free rate, dividend yield and expected volatility, are required to be made by the directors in applying the Binomial Model, which are summarised as below.
+Note: The expected volatility, measured as the standard deviation of expected share price returns, is determined based on the average daily trading price volatility of the shares of the Company.

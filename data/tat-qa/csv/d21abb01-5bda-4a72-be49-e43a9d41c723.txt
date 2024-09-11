@@ -1,0 +1,4 @@
+Adjusted Return on Invested Capital (Adjusted RoIC): TORM defines Adjusted RoIC as earnings before interest and tax (EBIT) less tax and impairment losses and reversals, divided by the average invested capital less average impairment for the period. Invested capital is defined below.
+The Adjusted RoIC expresses the returns generated on capital invested in the Group adjusted for impacts related to the impairment of the fleet. The progression of RoIC is used by TORM to measure progress against our longer-term value creation goals outlined to investors. Adjusted RoIC is calculated as follows:
+¹⁾ Average invested capital is calculated as the average of the opening and closing balance of invested capital.
+²⁾ Average impairment is calculated as the average of the opening and closing balances of impairment charges on vessels and goodwill in the balance sheet.

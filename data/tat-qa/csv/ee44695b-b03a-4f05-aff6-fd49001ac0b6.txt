@@ -1,0 +1,3 @@
+2019 Performance Target and Payout: The ultimate number of our PBRS that vest, can range between 0% to 200%, and will be based on our achievement of the absolute Adjusted EBITDA Run Rate target (measured from fourth quarter of 2018 to fourth quarter of 2020), as illustrated in the table below.
+(1) Determined by dividing (i) the Adjusted EBITDA actually attained for the fourth quarter of 2020 minus the Adjusted EBITDA actually attained for the fourth quarter of 2018 by (ii) the Adjusted EBITDA actually attained for the fourth quarter of 2018.
+(2) Linear interpolation is used when our Adjusted EBITDA Run Rate performance is between the threshold, target and maximum amounts to determine the corresponding percentage of target award earned.

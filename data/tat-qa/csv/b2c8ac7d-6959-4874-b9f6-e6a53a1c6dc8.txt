@@ -1,0 +1,11 @@
+16. FINANCIAL INSTRUMENTS AND OTHER FAIR VALUE DISCLOSURES
+The majority of NAT and its subsidiaries’ transactions, assets and liabilities are denominated in United States dollars, the functional currency of the Company. There is no significant risk that currency fluctuations will have a negative effect on the value of the Company’s cash flows.
+The Company categorizes its fair value estimates using a fair value hierarchy based on the inputs used to measure fair value for those assets that are recorded on the Balance Sheet at fair value. The fair value hierarchy has three levels based on the reliability of the inputs used to determine fair value as follows:
+Level 1. Quoted prices (unadjusted) in active markets for identical assets or liabilities that the reporting entity can access at the measurement date.
+Level 2. Inputs, other than the quoted prices in active markets, that are observable either directly or indirectly; and
+Level 3. Unobservable inputs in which there is little or no market data, which require the reporting entity to develop its own assumptions.
+The following methods and assumptions were used to estimate the fair value of each class of financial instruments and other financial assets.
+-  The carrying value of cash and cash equivalents and marketable securities, is a reasonable estimate of fair value.
+-  The estimated fair value for the long-term debt is considered to be equal to the carrying values since it bears spreads and variable interest rates which approximate market rates.
+The carrying value and estimated fair value of the Company`s financial instruments at December 31, 2019 and 2018, are as follows:
+* The 2019 Senior Secured Credit Facility and Vessel financing 2018 Newbuildings carry a floating LIBOR interest rate, plus a margin and the fair value is assumed to equal the carrying value.

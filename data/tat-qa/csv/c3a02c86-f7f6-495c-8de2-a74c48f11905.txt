@@ -1,0 +1,5 @@
+Return on invested capital
+Return on invested capital (ROIC) is a measure of the return generated on capital invested by the Group. The measure provides a guide rail for longterm value creation and encourages compounding reinvestment within the business and discipline around acquisitions with low returns and long payback. ROIC is calculated as underlying operating profit after tax divided by the annual average of: goodwill, intangible assets, property, plant and equipment, net assets held for sale, inventories, trade and other current receivables, and trade payables and other current liabilities.
+(a) Restated following adoption of IFRS 16. See note 1 and note 24 for further details.
+(b) See reconciliation of operating profit to underlying operating profit on page 30.
+(c) Tax on underlying operating profit is calculated as underlying operating profit before tax multiplied by underlying effective tax rate of 25.5% (2018: 25.7%) which is shown on page 30.

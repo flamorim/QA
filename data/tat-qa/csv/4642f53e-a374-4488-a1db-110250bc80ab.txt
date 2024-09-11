@@ -1,0 +1,9 @@
+GasLog Ltd. and its Subsidiaries
+Notes to the consolidated financial statements (Continued)
+For the years ended December 31, 2017, 2018 and 2019
+(All amounts expressed in thousands of U.S. Dollars, except share and per share data)
+29. Earnings/(losses) per share (‘‘EPS’’)
+Basic earnings/(losses) per share was calculated by dividing the profit/(loss) for the year attributable to the owners of the common shares after deducting the dividend on Preference Shares by the weighted average number of common shares issued and outstanding during the year.
+Diluted EPS is calculated by dividing the profit/(loss) for the year attributable to the owners of the Group adjusted for the effects of all dilutive potential ordinary shares by the weighted average number of all potential ordinary shares assumed to have been converted into common shares, unless such potential ordinary shares have an antidilutive effect.
+The following reflects the earnings/(losses) and share data used in the basic and diluted earnings/ (losses) per share computations:
+The Group excluded the effect of 2,630,173 SARs and 367,162 RSUs in calculating diluted EPS for the year ended December 31, 2019, as they were anti-dilutive (December 31, 2018: 555,453 SARs and 0 RSUs, December 31, 2017: 998,502 SARs and 0 RSUs).

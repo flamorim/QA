@@ -1,0 +1,6 @@
+29. Contract balances
+The following table provides information about receivables and contract liabilities from contracts with customers. The Group does not have any contract assets.
+There was no revenue recognised in 2019, 2018 or 2017 from performance obligations satisfied in previous periods.
+The timing of revenue recognition, invoicing and cash collections results in trade receivables, deferred income and advance customer payments received on account on the balance sheet.
+The Group receives payments from customers based on a billing schedule, as established in the contract. Trade receivables are recognised when the right to consideration becomes unconditional. Contract liabilities are recognised as revenue as (or when) the Group performs under the contract.
+The Group also recognises incremental costs incurred to obtain a contract as an asset if it expects to recover those costs. Such costs are presented in the balance sheet as assets recognised from costs to obtain a contract and disclosed in note 21.

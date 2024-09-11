@@ -1,0 +1,5 @@
+Employee Stock Purchase Plan
+The maximum aggregate number of shares that are available for issuance under the 2011 Employee Stock Purchase Plan (the “ESPP”) is 12,000,000.
+Employees are eligible to participate in the ESPP after 90 days of employment with the Company. The ESPP permits eligible employees to purchase common stock through payroll deductions, which may not exceed 10% of an employee’s compensation, as defined in the ESPP, at a price equal to 85% of the fair value of the common stock at the beginning or end of the offering period, whichever is lower. The ESPP is intended to qualify under Section 423 of the Internal Revenue Code. As of August 31, 2019, 3,397,019 shares remained available for issue under the 2011 ESPP.
+The fair value of shares issued under the ESPP was estimated on the commencement date of each offering period using the Black-Scholes option pricing model. The following weighted-average assumptions were used in the model for each respective period:
+(1) The expected volatility was estimated using the historical volatility derived from the Company’s common stock.

@@ -1,0 +1,4 @@
+5.1.3 Consolidated Shipments and Net Revenue in 2019 and 2018
+Unit: Shipments (thousand 12-inch equivalent wafers) / Net Revenue (NT$ thousands)
+Note 1: Domestic means sales to Taiwan. Note 2: Others mainly include revenue associated with packaging and testing services, mask making, design services, and royalties.
+Note 3: Commencing in 2018, the Company began to break down the net revenue by product based on a new method which associates most estimated sales returns and allowances with individual sales transactions, as opposed to the previous method which allocated sales returns and allowances based on the aforementioned gross revenue. The Company believes the new method provides a more relevant breakdown than the previous one.

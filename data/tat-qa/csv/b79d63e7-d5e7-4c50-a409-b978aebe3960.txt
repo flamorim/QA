@@ -1,0 +1,6 @@
+Stock Option Award Amendment
+The Board of Directors has in 2019 amended and restated the 2011 Equity Incentive Plan to reserve an additional 1,000,000 stock options for issuance. The stock options have been allocated amongst management and employees of the Company.
+As of December 31, 2019, the Company has granted 755,000 and 234,000 options with vesting over a period of two and three years, respectively, and an exercise price of $4.70 per share.
+The Company has used the Black-Scholes option pricing model to measure the grant date fair value of the options with the following assumptions applied to the model;
+The expected volatility was based on historical volatility observed from historical company-specific data during the two years prior to the grant date.
+The compensation expense related to the stock option awards was $0.1 million for the year ended December 31, 2019 and the remaining unrecognized cost related to non-vested stock options was $0.5 million with a remaining average remaining vesting period of 2.1 years.

@@ -1,0 +1,4 @@
+Contract balances
+The following table provides information about receivables, contract assets and contract liabilities from contracts with customers.
+Accrued income relates to the Group’s rights to consideration for services provided but not invoiced at the reporting date. Accrued income is transferred to receivables when invoiced.
+Deferred income relates to advanced consideration received for which revenue is recognised as or when services are provided. Included within deferred income is £11.2m (2018: £nil) relating to consideration received from Auto Trader Auto Stock Limited (which forms part of the Group’s joint venture) for the provision of data services (note 16). Revenue relating to this service is recognised on a straight-line basis over a period of 20 years.

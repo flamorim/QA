@@ -1,0 +1,3 @@
+A.2.6 Calculation of return on capital employed
+For purposes of calculating ROCE in interim periods, income before interest after tax is annualized. Average capital employed is determined using the average of the respective balances as of the quarterly reporting dates for the periods under review.
+[1] Item Other interest expenses / income, net primarily consists of interest relating to corporate debt, and related hedging activities, as well as interest income on corporate assets.

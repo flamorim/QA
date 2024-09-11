@@ -1,0 +1,5 @@
+Interest rate swaps
+The Group has the following interest rate swaps in place as at the end of the reporting period:
+Future interest rate swaps in place at the end of the reporting period have maturity dates ranging from 23 September 2019 to 23 September 2026 (2018: 24 September 2018 to 23 September 2026).
+On 24 June 2019, the Group reset the interest rates associated with AUD denominated interest rate swaps. This resulted in a cash outflow of $22.9m which reduced the Group’s financial liability presented in note 9.8. The cumulative change in fair value of these hedging instruments is carried in a separate reserve in equity (cash flow hedge reserve of NSPT presented within non-controlling interest in the Group’s consolidated statement of changes in equity).
+This balance will be recycled from the hedge reserve to finance costs in the statement of profit and loss in future reporting periods corresponding to when the underlying hedged item impacts profit or loss. For the year ended 30 June 2019, $0.1m has been recognised in finance costs relating to this item.

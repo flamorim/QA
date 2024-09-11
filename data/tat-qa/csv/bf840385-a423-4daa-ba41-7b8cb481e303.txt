@@ -1,0 +1,6 @@
+Note 9. Non-current assets - property, plant and equipment
+Property, plant and equipment secured under finance leases
+Refer to note 24 for further information on property, plant and equipment secured under finance leases.
+Accounting policy for property, plant and equipment
+Plant and equipment are stated at cost less accumulated depreciation and any accumulated impairment losses. Cost includes expenditure that is directly attributable to the acquisition of the items. Subsequent costs are included in the assets carrying amount or recognised as a separate asset, as appropriate, only when it is probable that future economic benefits associated with the item will flow to the group and the cost of the item can be measured reliably.
+Plant and equipment are depreciated and leasehold improvements are amortised over their estimated useful lives using the straightline method. Assets held under finance lease are depreciated over their expected useful lives as owned assets or, where shorter, the term of the relevant lease.

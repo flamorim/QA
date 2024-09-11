@@ -1,0 +1,7 @@
+Expected realisation of remaining performance obligations at year end
+The Company applies the practical expedient in paragraph 121 of IFRS 15 and does not disclose information about remaining performance obligations that have original expected durations of one year or less.
+For contracts that exceed one year, deferred income that relates to unsatisfied or partially satisfied performance obligations at year end is expected to be recognised as revenue in the future as follows:
+The above information represents the revenue the Company will recognise when it satisfies the remaining performance obligations in the contracts. The amounts presented do not include orders for which neither party has performed.
+Revenue from the sale of hardware and software generally arises from contracts less than one year in length. Consequently, the above amounts predominantly relate to the sale of maintenance and support services.
+Virtually all of the revenue will be recognised within three years.
+The Company provides standard warranties on its products and services. The nature of these warranties is considered to provide customers with assurance that the related product or service will function as intended in accordance with the agreed specification, and does not contain or imply any additional service obligation to the customer. Warranty obligations are estimated and recognised as liabilities based on the probable outflow of resources.

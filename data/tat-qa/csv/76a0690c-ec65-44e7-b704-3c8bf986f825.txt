@@ -1,0 +1,11 @@
+2.6 Taxes (continued)
+1 Net deferred tax liabilities include net deferred tax assets of $2,195,000 (2018: $1,937,000) from the iMoney Group.
+Recognition and measurement
+Our income tax expense is the sum of current and deferred income tax expenses. Current income tax expense is calculated on accounting profit after adjusting for non-taxable and non-deductible items based on rules set by the tax authorities. Deferred income tax expense is calculated at the tax rates that are expected to apply to the period in which the deferred tax asset is realised or the deferred tax liability is settled. Both our current and deferred income tax expenses are calculated using tax rates that have been enacted or substantively enacted at reporting date.
+Our current and deferred taxes are recognised as an expense in profit or loss, except when they relate to items that are directly recognised in other comprehensive income or equity. In this case, our current and deferred tax expenses are also recognised directly in other comprehensive income or equity.
+We generally recognise deferred tax liabilities for all taxable temporary differences, except to the extent that the deferred tax liability arises from:
+• the initial recognition of goodwill; and
+• the initial recognition of an asset or liability in a transaction that is not a business combination and affects neither our accounting profit nor our taxable income at the time of the transaction.
+For our investments in controlled entities and associated entities, recognition of deferred tax liabilities is required unless we are able to control the timing of our temporary difference reversal and it is probable that the temporary difference will not reverse.
+Deferred tax assets are recognised to the extent that it is probable that taxable profit will be available against which the deductible temporary differences, and the carried forward unused tax losses and tax credits, can be utilised
+Deferred tax assets and deferred tax liabilities are offset in the statement of financial position where they relate to income taxes levied by the same taxation authority and to the extent that we intend to settle our current tax assets and liabilities on a net basis.

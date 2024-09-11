@@ -1,0 +1,3 @@
+Disaggregation of Revenue
+The following table presents the Company's revenue disaggregated by major product category (amounts in thousands):
+Software and hardware revenue is generated from on premise software license sales, as well as sales of hardware scanner boxes and on premise appliance products. Service and other revenue is generated from the sale of transactional SaaS products and services, maintenance associated with the sale of software and hardware, and consulting and professional services.

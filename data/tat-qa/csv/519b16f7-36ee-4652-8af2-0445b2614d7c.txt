@@ -1,0 +1,15 @@
+(1) Represents accelerated vesting of 48,849 stock options. Pursuant to Mr. Dooley’s stock option agreements (dated January 17, 2019),
+if Mr. Dooley’s employment is terminated without cause or for good reason within six months following a “change in control”, he will
+become immediately vested in all outstanding unvested stock options, and all of Mr. Dooley’s outstanding options shall remain
+exercisable in accordance with their terms, but in no event for less than 90 days after such termination.
+(2) Represents accelerated vesting of 15,000 unvested restricted stock units. Pursuant to Mr. Dooley’s restricted stock unit agreement
+(dated March 1, 2012), upon a “change in control” all non-vested units shall accelerate and be vested as of the date of the “change in
+control” and if Mr. Dooley’s employment is terminated without cause or for good reason, all non-vested units shall accelerate and be
+vested as of the date of termination
+(3) Represents accelerated vesting of 7,500 unvested restricted stock units. Pursuant to Mr. Dooley’s restricted stock unit agreement
+(dated March 1, 2012), on the event of Mr. Dooley’s death or total disability, 7,500 restricted stock units (50% of the unvested restricted
+stock units granted under such agreement at December 31, 2018) would vest.
+(4) Represents accelerated vesting of 10,630 unvested performance restricted stock units. Pursuant to Mr. Dooley's performance restricted
+stock unit agreement (dated January 17, 2019), if Mr. Dooley’s employment is terminated without cause or for good reason within six
+months following a “change in control” or if Mr. Dooley's employment is terminated due to death or total disability, all non-vested units
+shall accelerate and be vested as of the date of termination.

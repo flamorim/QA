@@ -1,0 +1,6 @@
+Profitability Measures
+Net income:
+The net income in the fiscal year ended February 28, 2018 was $16.6 million as compared to a net loss of $7.9 million in the same period last year. The increase is primarily the result of the $28.3 million non-operating gain from the legal settlement with a former supplier of LoJack, which was recognized during fiscal 2018. This gain was partially offset by higher tax expense in fiscal 2018 due to U.S. and foreign taxes on the $28.3 million legal settlement gain as well as the revaluation of our net deferred income tax assets that occurred in the fourth quarter of fiscal 2018 as we adopted the provisions of the Tax Cuts and Jobs Act which was enacted on December 22, 2017.
+Adjusted EBITDA:
+Adjusted EBITDA for Telematics Systems in the fiscal year ended February 28, 2018 increased $1.5 million compared to the same period last year due to higher MRM products revenue. Adjusted EBITDA for Software and Subscription Services increased $5.2 million compared to the same period last year due primarily to lower selling and marketing expenses and lower general and administrative expenses.
+See Note 20 for a reconciliation of Adjusted EBITDA by reportable segments and a reconciliation to GAAP-basis net income (loss).

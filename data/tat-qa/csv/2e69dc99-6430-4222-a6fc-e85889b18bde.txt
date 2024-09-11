@@ -1,0 +1,5 @@
+Net debt
+Net debt is a measure that provides valuable additional information on the summary presentation of the Group’s net financial liabilities and is a measure in common use elsewhere.
+Prior to this quarter, all financial asset derivatives were current financial assets and so reduced net debt. Following a recent review we now also have financial asset derivatives that are non-current in nature. As all of these derivatives relate to financial liabilities, we continue to exclude them for the purposes of our net debt calculation and have expanded our definition to reflect this.
+Net debt is now defined as the excess of total financial liabilities, excluding trade payables and other current liabilities, over cash, cash equivalents and other current financial assets, excluding trade and other current receivables, and non-current financial asset derivatives that relate to financial liabilities.
+(a) Restated following adoption of IFRS 16. See note 1 and note 24 for further details.

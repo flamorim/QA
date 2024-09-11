@@ -1,0 +1,4 @@
+Contract assets and deferred revenue
+(1) Included in other current assets. (2) Included in other long-term assets. (3) Included in other long-term liabilities.
+Contract assets are client committed amounts for which revenue recognized exceeds the amount billed to the client and the right to payment is subject to conditions other than the passage of time, such as the completion of a related performance obligation. Deferred revenue consists of billings and payments received in advance of revenue recognition. Contract assets and deferred revenue are netted at the contract level for each reporting period.
+The change in deferred revenue in the year ended December 31, 2019 was primarily due to new billings in advance of revenue recognition, partially offset by revenue recognized during the period that was included in deferred revenue at December 31, 2018.

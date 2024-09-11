@@ -1,0 +1,3 @@
+Net Income Per Share
+Basic net income per share is computed by dividing net income by the weighted-average number of common shares outstanding for the period. Diluted net income per share is computed giving effect to all potentially dilutive common stock and common stock equivalents, including stock options, RSUs and common stock subject to repurchase.
+The following table reconciles the shares used in calculating basic net income per share and diluted net income per share (in thousands):

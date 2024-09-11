@@ -1,0 +1,4 @@
+The following table shows select line items that were materially impacted by the adoption of ASC Topics 606 and 340-40 on Autodesk’s Consolidated Balance Sheet as of January 31, 2019:
+(1) Short term and long term "contract assets" under ASC Topic 606 are included within "Prepaid expenses and other current assets" and "Other assets", respectively, on the Consolidated Balance Sheet
+(2) Included in the "Accumulated deficit" adjustment is $179.4 million for the cumulative effect adjustment of adopting ASC Topic 606 and 340-40 on the opening balance as of February 1, 2018.
+Adoption of the standard had no impact to net cash provided by or (used in) operating, financing, or investing activities on the Company’s Consolidated Statements of Cash Flows

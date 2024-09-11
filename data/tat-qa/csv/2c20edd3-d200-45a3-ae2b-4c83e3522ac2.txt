@@ -1,0 +1,4 @@
+ACCOUNTING POLICY
+Accounts receivable represent amounts owing to us that are currently due and collectible. We initially recognize accounts receivable on the date they originate. We measure accounts receivable initially at fair value, and subsequently at amortized cost, with changes recognized in net income. We measure an impairment loss for accounts receivable as the excess of the carrying amount over the present value of future cash flows we expect to derive from it, if any. The excess is allocated to an allowance for doubtful accounts and recognized as a loss in net income.
+EXPLANATORY INFORMATION
+We have retrospectively reclassified $23 million as at December 31, 2018 and January 1, 2019 related to our wireless financing programs from “accounts receivable” to “other current assets” as the collection time frame of the amounts differs from accounts receivable.

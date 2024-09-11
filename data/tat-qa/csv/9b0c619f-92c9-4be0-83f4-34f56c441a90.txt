@@ -1,0 +1,4 @@
+Unearned Revenue
+Unearned revenue as of the periods presented consisted of the following (table in millions):
+Unearned subscription and SaaS revenue is generally recognized over time as customers consume the services or ratably over the term of the subscription, commencing upon provisioning of the service. Previously, unearned subscription and SaaS revenue was allocated between unearned license revenue and unearned software maintenance revenue in prior periods and has been reclassified to conform with current period presentation.
+Unearned software maintenance revenue is attributable to our maintenance contracts and is generally recognized over time on a ratable basis over the contract duration. The weighted-average remaining contractual term as of January 31, 2020 was approximately two years. Unearned professional services revenue results primarily from prepaid professional services and is generally recognized as the services are performed.

@@ -1,0 +1,16 @@
+Home Loans CGU
+The recoverable amount of the Home loans CGU as at 31 December 2018 was determined at $5.6m based on a value-in-use calculation using cash flow projections from financial budgets approved by Senior Management covering a five-year period. The projected cash flows were updated to reflect a change in Senior Management and their initial views as part of a strategic review undertaken. The pre-tax discount rate applied to cash flow projections was 13% (30 June 2018: 25%) and cash flows beyond the five-year period were extrapolated using a 3% growth rate (30 June 2018: 3%). As a result of this analysis, management recognised an impairment charge of $4,450,000 against goodwill and capitalised software development costs. No other impairment was identified for the CGUs to which goodwill or brand names are allocated.
+3.2 Goodwill and other intangible assets (continued)
+Key estimates – value-in-use calculation
+Cash flow projections
+Our cash flow projections are based on five-year management-approved forecasts unless a longer period is justified. The forecasts use management estimates to determine income, expenses, capital expenditure and cash flows for each asset and CGU.
+Discount rate
+Discount rates represent the current market assessment of the risks specific to each CGU, taking into consideration the time value of money and individual risks of the underlying assets that have not been incorporated in the cash flow estimates. The discount rate calculation is based on the specific circumstances of the Group and its operating segments and is derived from its weighted average cost of capital (WACC). The WACC takes into account both debt and equity. The cost of equity is derived from the expected return on investment by the Group’s investors. The cost of debt is based on the interest bearing borrowings the Group is obliged to service. CGU-specific risk is incorporated into the WACC rate where it is considered appropriate. The pre-tax discount rates are as follows:
+1 Discount rate based on impairment assessment completed on 31 December 2018 which resulted in full impairment of goodwill allocated to Home Loans CGU
+2 Money CGU which consisted of the Infochoice business was sold to an independent third party on 18 February 2019. Refer to note 6.3 for details.
+Growth rate estimates
+For each CGU (excluding International), 5 years of cash flows have been included in the cash flow models. These are based on the long-term plan and growth rates of 3%.
+Market share assumptions
+These assumptions are important because management assesses how the unit’s position, relative to its competitors, might change over the budget period. Management expects the Group’s share of its respective markets to grow over the forecast period.
+Sensitivity to changes in assumptions
+With regard to the assessment of ‘value-in-use’ of the CGUs, management believes that no reasonable change in any of the above key assumptions would cause the carrying value of the units to materially exceed its recoverable amount.

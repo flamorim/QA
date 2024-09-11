@@ -442,9 +442,9 @@ def create_mpnet_embeddings_table(device,max_sequency):
             num_tokens = len(input_id)
             tables_tokens_len.append(num_tokens)
 
-
+        exit()
         # fazendo com os nomes de colunas melhorado e salvando os novos embeddings
-        file_name = f'/data/ott-qa/embeddings/improved/mpnet_table_embeddings_{device}_{max_seq}_{max_pos}.pkl'
+        file_name = f'xxxxxxx/data/ott-qa/embeddings/improved/mpnet_table_embeddings_{device}_{max_seq}_{max_pos}.pkl'
         #file_name = f'/data/ott-qa/embeddings/mpnet_table_embeddings_{device}_{max_seq}_{max_pos}.pkl'
 
         with open(file_name, "wb") as fOut:
@@ -678,7 +678,7 @@ if __name__ == '__main__':
     
     #read_dataset_pickle()
     #create_mpnet_embeddings_table("cpu",384)          #refeitos, alterando os nomes dos campos do dict
-    create_mpnet_embeddings_table("cpu",512)
+    #create_mpnet_embeddings_table("cpu",512)
     
     #create_mpnet_embeddings_table_header("cpu",384)
     #create_mpnet_embeddings_table_header("cpu",512)  ==> erro
@@ -687,7 +687,7 @@ if __name__ == '__main__':
     #create_mpnet_embeddings_table_section_text("cpu",512)
         
     #create_mpnet_embeddings_table_intro("cpu",384)
-    #create_mpnet_embeddings_table_intro("cpu",512)
+    create_mpnet_embeddings_table_intro("cpu",512)
     
     #create_mpnet_embeddings_table_section_title("cpu",384)
     #create_mpnet_embeddings_table_section_title("cpu",512)

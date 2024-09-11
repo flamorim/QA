@@ -20,7 +20,8 @@ print(device)
 def get_top100_tables(list_top100_uid):
     tables_top100_list = []
     for table_uid in list_top100_uid:
-        file_name = f'/data/ott-qa/new_csv/{table_uid}.csv'
+        #file_name = f'/data/ott-qa/new_csv/{table_uid}.csv'
+        file_name = table_uid
         try:
             df = pd.read_csv(file_name, sep=',')
         except:
@@ -61,11 +62,28 @@ def build_reranking(retriever_file, device, run_improve_question):
                     path_to_files = json.load(file)
 
             dataset = pd.read_csv(retriever_file,sep=',')
+            #dataset = dataset.drop(dataset.index[11:]) 
+
+
+            if run_improve_question == True:
+                df_teste = pd.DataFrame()
+                df_teste = pd.read_csv('/data/tat-qa/question_rewriting/improved_questions.csv',sep=',')
+
+                to_remove = '/data/tat-qa/to_filter/remover002.unnmamed0.2024.08.10.csv'
+                df_to_remove = pd.read_csv(to_remove, sep=',')
+                list_to_remove = df_to_remove['question_id'].to_list()
+
+                print(df_teste.shape)
+                df_teste = df_teste[~df_teste['question_id'].isin(list_to_remove)]
+                print(df_teste.shape)
+
+                questions_opt = df_teste['questions_opt'].to_list()
+
             df = pd.DataFrame()
 
             for index, data in dataset.iterrows():
                 if run_improve_question == True:
-                    inp_question   = data['question_opt']
+                    inp_question   = questions_opt[index] #data['question_opt']
                 else:
                     inp_question   = data['question_txt']
 
@@ -84,13 +102,13 @@ def build_reranking(retriever_file, device, run_improve_question):
                 rr.sort_values(by='cross_encoder_score',ascending=False,ignore_index=True,inplace=True)
             
                 rr_top1 = rr_top10 = rr_top50 = rr_top100 = False
-                if data['table_uid_gt'] == rr['uid'][0]:
+                if  f'/data/tat-qa/csv/{data["table_uid_gt"]}.csv' == rr['uid'][0]:
                     rr_top1 = True
-                elif data['table_uid_gt'] in rr['uid'][1:11].tolist():
+                elif  f'/data/tat-qa/csv/{data["table_uid_gt"]}.csv' in rr['uid'][1:11].tolist():
                     rr_top10 = True
-                elif data['table_uid_gt'] in rr['uid'][11:51].tolist():
+                elif  f'/data/tat-qa/csv/{data["table_uid_gt"]}.csv' in rr['uid'][11:51].tolist():
                     rr_top50 = True
-                elif data['table_uid_gt'] in rr['uid'][51:].tolist():
+                elif  f'/data/tat-qa/csv/{data["table_uid_gt"]}.csv' in rr['uid'][51:].tolist():
                     rr_top100 = True
 
                 new_data = {'rr_top100_table_idx'   : rr['idx'].tolist(),
@@ -105,7 +123,7 @@ def build_reranking(retriever_file, device, run_improve_question):
                 print(index)
                 #    break
 
-                if index % 500 == 0:
+                if index % 100 == 0:
                     rr_file = path_to_files['reranker_marcomini_destination'] + retriever_file.split('/')[-1]
                     rr_file = rr_file.replace('csv',f'{index}.csv')
                     df_reranking = pd.concat([dataset.reset_index(drop=True), df.reset_index(drop=True)], axis=1)  ## ok

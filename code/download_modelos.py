@@ -135,6 +135,38 @@ def salva_mdr():
     tokenizer.save_pretrained(diretorio_destino)
     model.save_pretrained(diretorio_destino)
 
+def salva_reranker():
+    from sentence_transformers import CrossEncoder
+    rerank_cross_encoder_model = CrossEncoder("cross-encoder/stsb-roberta-base")
+    #The model will predict scores for the pairs ('Sentence 1', 'Sentence 2')
+    diretorio_destino = "/modelos/reranker/cross-encoder-stsb-roberta-base"
+    rerank_cross_encoder_model.save_pretrained(diretorio_destino)
+
+def carrega_reranker():
+    from sentence_transformers import CrossEncoder
+    #The model will predict scores for the pairs ('Sentence 1', 'Sentence 2')
+    diretorio = "/modelos/reranker/cross-encoder-stsb-roberta-base"
+    rerank_cross_encoder_model = CrossEncoder(diretorio)
+    print(rerank_cross_encoder_model)
+
+def salva_reranker_marco_MiniLM():
+    from sentence_transformers import CrossEncoder
+    rerank_cross_encoder_model = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
+    #The model will predict scores for the pairs ('Sentence 1', 'Sentence 2')
+    diretorio_destino = "/modelos/reranker/cross-encoder-ms-marco-MiniLM-L-6-v2"
+    rerank_cross_encoder_model.save_pretrained(diretorio_destino)
+
+def carrega_reranker_marco_MiniLM():
+    from sentence_transformers import CrossEncoder
+    #The model will predict scores for the pairs ('Sentence 1', 'Sentence 2')
+    diretorio = "/modelos/reranker/cross-encoder-ms-marco-MiniLM-L-6-v2"
+    rerank_cross_encoder_model = CrossEncoder(diretorio)
+    print(rerank_cross_encoder_model)
+
+
+
+
+#sbatch Start-rr-llm.srm
 
 #salva_modelo()
 #carrega_modelo()
@@ -144,4 +176,28 @@ def salva_mdr():
 #carrega_bert_2_classes()
 #salva_tapex()
 #carrega_tapex()
-salva_mdr()
+#salva_mdr()
+#carrega_reranker()
+#salva_reranker_marco_MiniLM()
+#carrega_reranker_marco_MiniLM()
+
+
+diretorio = "/QA/Bert/modelos/deepset_all-mpnet-base-v2-table"
+model = SentenceTransformer(diretorio)
+
+
+
+from sentence_transformers import CrossEncoder
+diretorio = "/modelos/reranker/cross-encoder-ms-marco-MiniLM-L-6-v2"
+model = CrossEncoder(diretorio)
+
+#num_layers = len(retriever_biencoder_model.encoder.layer)
+num_layers = len(model.bert.encoder.layer)
+print(num_layers)
+
+total_params = sum(p.numel() for p in model.parameters())
+
+#print(model)
+print(total_params)   
+
+# retriever 109.486.464

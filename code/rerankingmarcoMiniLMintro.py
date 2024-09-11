@@ -20,7 +20,8 @@ print(device)
 def get_top100_tables(list_top100_uid):
     tables_top100_list = []
     for table_uid in list_top100_uid:
-        file_name = f'/data/ott-qa/new_csv/{table_uid}.csv'
+        #file_name = f'/data/ott-qa/new_csv/{table_uid}.csv'
+        file_name = table_uid
         try:
             df = pd.read_csv(file_name, sep=',')
         except:
@@ -41,7 +42,6 @@ def _preprocess_tables(tables: list):
 
 def re_ranking(question,tables):
     # Now, do the re-ranking with the cross-encoder
-
     
     diretorio = "/modelos/reranker/cross-encoder-ms-marco-MiniLM-L-6-v2"
     cross_encoder = CrossEncoder(diretorio)
@@ -62,6 +62,9 @@ def build_reranking(retriever_file, device, run_improve_question):
                     path_to_files = json.load(file)
 
             dataset = pd.read_csv(retriever_file,sep=',')
+
+            dataset = dataset.drop(dataset.index[:1000]) 
+
             df = pd.DataFrame()
 
             for index, data in dataset.iterrows():
@@ -87,13 +90,13 @@ def build_reranking(retriever_file, device, run_improve_question):
                 rr.sort_values(by='cross_encoder_score',ascending=False,ignore_index=True,inplace=True)
             
                 rr_top1 = rr_top10 = rr_top50 = rr_top100 = False
-                if data['table_uid_gt'] == rr['uid'][0]:
+                if f'/data/tat-qa/csv/{data["table_uid_gt"]}.csv' == rr['uid'][0]:
                     rr_top1 = True
-                elif data['table_uid_gt'] in rr['uid'][1:11].tolist():
+                elif f'/data/tat-qa/csv/{data["table_uid_gt"]}.csv' in rr['uid'][1:11].tolist():
                     rr_top10 = True
-                elif data['table_uid_gt'] in rr['uid'][11:51].tolist():
+                elif f'/data/tat-qa/csv/{data["table_uid_gt"]}.csv' in rr['uid'][11:51].tolist():
                     rr_top50 = True
-                elif data['table_uid_gt'] in rr['uid'][51:].tolist():
+                elif f'/data/tat-qa/csv/{data["table_uid_gt"]}.csv' in rr['uid'][51:].tolist():
                     rr_top100 = True
 
                 new_data = {'rr_top100_table_idx'   : rr['idx'].tolist(),
@@ -108,9 +111,10 @@ def build_reranking(retriever_file, device, run_improve_question):
                 print(index)
                 #    break
 
-                if index % 500 == 0:
+                if index % 100 == 0:
                     
                     rr_file = path_to_files['reranker_marcominiintro_destination'] + retriever_file.split('/')[-1]
+
                     rr_file = rr_file.replace('csv',f'{index}.csv')
                     
 
@@ -118,16 +122,38 @@ def build_reranking(retriever_file, device, run_improve_question):
                     df_reranking.to_csv(rr_file, sep=',', index=False)       
                     print(f'criado {rr_file}')
                     
+
                     #df_reranking = pd.concat([dataset.reset_index(drop=True), df.reset_index(drop=True)], axis=1)
                     #return(df_reranking)
-
+ 
 
             df_reranking = pd.concat([dataset.reset_index(drop=True), df.reset_index(drop=True)], axis=1)
             return(df_reranking)
 
 
+def concatena_files():
+    file1 = '/data/tat-qa/reranking/mpnet_table_intro_embeddings_cpu_512_512_filtered.de0a1000.csv'
+    #ate o 3160    ou 81922d61-f423-498e-9281-d3c375e3d4ea
+    df_file1 = pd.read_csv(file1, sep=',')
+    df_file1 = df_file1.reset_index(drop=True)
+    print(df_file1.shape)
+    df_file1 = df_file1.drop(df_file1.index[1000:])  ## teste
+    print(df_file1.shape)
 
-if __name__ == "__main__":
+    file2 = '/data/tat-qa/reranking/mpnet_table_intro_embeddings_cpu_512_512_filtered.de1000.ao.fim.csv'
+    df_file2 = pd.read_csv(file2, sep=',')
+    print(df_file2.shape)
+
+    df_reader = pd.concat([df_file1.reset_index(drop=True), df_file2.reset_index(drop=True)], axis=0)
+    print(df_reader.shape)
+    reader_file = '/data/tat-qa/reranking/mpnet_table_intro_embeddings_cpu_512_512_filtered.csv'
+    df_reader.to_csv(reader_file, sep=',', index=False)
+
+
+
+
+
+if __name__ == "__MMMmain__":
     run_reranker = False
     run_improve_question = True
 
@@ -142,3 +168,6 @@ if __name__ == "__main__":
                 df_reranking = build_reranking(retriever_file, "cpu", run_improve_question)
                 reranking_file = retriever_file.replace('/retriever/','/reranking/improved003/')
                 df_reranking.to_csv(reranking_file,sep=',',index=False)  
+
+
+#concatena_files()

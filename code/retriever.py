@@ -11,28 +11,16 @@ import utils
 from sentence_transformers import SentenceTransformer, util
 
 
-retriever_model_name = "deepset/all-mpnet-base-v2-table"  # para usar no nome dos embeddings salvos localmente
+#retriever_model_name = "deepset/all-mpnet-base-v2-table"  # para usar no nome dos embeddings salvos localmente
 path_local = "/modelos/deepset_all-mpnet-base-v2-table" #deepset_all-mpnet-base-v2-tablel.pth"
 device = "cpu"
 retriever_biencoder_model = SentenceTransformer(path_local, device=device)
 
 
-path_to_files = {
+def build_retriever(dataset_file,embedding_file, device ,run_improve_question, llm):
 
-        #'retriever_source':      '/data/ott-qa/embeddings/',                    #  base line path
-        'retriever_source':      '/data/ott-qa/embeddings/improved/',             #  nome das colunas sem caracter especial
-        #'retriever_destination': '/data/ott-qa/retriever/',                     #  base line path
-        #'retriever_destination': '/data/ott-qa/retriever/improved001/',          #  nome das colunas sem caracter especial
-        #'retriever_destination': '/data/ott-qa/retriever/improved002/',         #  aplicado llm nas questions base line path
-        'retriever_destination': '/data/ott-qa/retriever/improved003/',         #  nome das colunas sem caracter especial e aplicado llm nas questions base line path
-        #'retriever_destination': '/data/ott-qa/embeddings/retriever/improved001', #   perguntas transformadas em sentencas pelo LLM - REFAZER
-        #'reranker_roberta_source' : '/data/ott-qa/retriever/',                     # retriever baseline
-        #'reranker_roberta_source' : '/data/ott-qa/retriever/improved002/',
-        #'reranker_roberta_destination' : '/data/ott-qa/reranking/',
-         }
-
-
-def build_retriever(embedding_file, device ,run_improve_question, llm):
+    with open('/QA/Bert/code/path_to_files.json', 'r') as file:
+                    path_to_files = json.load(file)
 
     # dicionario com listas de todas as informacoes das tabelas
     list_embedding_dict = utils.get_embeddings(embedding_file,device)
@@ -54,17 +42,26 @@ def build_retriever(embedding_file, device ,run_improve_question, llm):
         'idx':        list_tables_idx,
         'url':        list_tables_url,
         'table_intro': list_tables_intro
-    }   
+    }
     df_tables = pd.DataFrame(dict_tables)
-
-
+    df_tables['idx'] = df_tables['idx'].astype(int)
+    df_tables['tokens_len'] = df_tables['tokens_len'].astype(int)
     # abrindo o dataset com as perguntas e respostas
     predictions = []
     count = 0
-    with open('/data/ott-qa/released_data/dev.json', 'r') as f:    # perguntas e respostas
+    with open(f'/data/{dataset_file}/released_data/dev.json', 'r') as f:    # perguntas e respostas
         data = json.load(f)
     dataset = utils.convert_dataset(data)
 
+    #ATENCAO REMOVENDO AS QUESTIONS FILTRADAS
+    #to_remove = '/QA/Bert/data/tat-qa/to_filter/remover002.unnmamed0.2024.08.10.csv'
+    #df_to_remove = pd.read_csv(to_remove, sep=',')
+    #list_to_remove = df_to_remove['question_id'].to_list()
+    #print('antes ', dataset.shape)
+    #dataset = dataset[~dataset['question_id'].isin(list_to_remove)]
+    #dataset.reset_index(drop=False, inplace=False)
+    #print('depois', dataset.shape)
+    ########################################################################
     topk_len = 100  # tamanho da top-K
 
     questions = dataset.question_txt.values.tolist()
@@ -74,7 +71,23 @@ def build_retriever(embedding_file, device ,run_improve_question, llm):
     # 1 - calcula similaridade - so tabelas
     if run_improve_question == True:
             df_teste = pd.DataFrame()
-            df_teste = pd.read_csv('/data/ott-qa/retriever/improved003/build_improve_questions.csv',sep=',')       
+            df_teste = pd.read_csv('/data/tat-qa/question_rewriting/improved_questions.csv',sep=',')
+
+
+            #ATENCAO REMOVENDO AS QUESTIONS FILTRADAS
+#            to_remove = '/QA/Bert/data/tat-qa/to_filter/remover002.unnmamed0.2024.08.10.csv'
+#            df_to_remove = pd.read_csv(to_remove, sep=',')
+#            list_to_remove = df_to_remove['question_id'].to_list()
+#            print('antes ', df_teste.shape)
+#            df_teste = df_teste[~df_teste['question_id'].isin(list_to_remove)]
+#            df_teste.reset_index(drop=False, inplace=False)
+#            print('depois', df_teste.shape)
+            ########################################################################
+
+
+
+
+
             questions_opt = df_teste['questions_opt'].to_list()
             questions_opt_status = df_teste['questions_opt_status'].to_list()
             #questions_opt,questions_opt_status = llmquestions.build_improve_questions(questions, device='CPU', llm=llm)
@@ -121,32 +134,40 @@ def build_retriever(embedding_file, device ,run_improve_question, llm):
             table_intro_list.append(table_intro_top100)
             table_tokens_len_list.append(tokens_len_top100)
             table_uid_list.append(table_uid_top100)
-            idx_gt = list_tables_uid.index(answer_table_uid) 
-            table_idx_gt.append(idx_gt)
-            table_url_gt.append(list_tables_url[idx_gt])
-            table_token_len_gt.append(table_tokens_len_list[index][0])  ### verificar
-            table_header_gt.append(list_tables_header[idx_gt])
+            try:
+                idx_gt = list_tables_uid.index(f'/data/tat-qa/csv/{answer_table_uid}.csv') 
+                table_idx_gt.append(idx_gt)
+                table_url_gt.append(list_tables_url[idx_gt])
+                table_token_len_gt.append(table_tokens_len_list[index][0])  ### verificar
+                table_header_gt.append(list_tables_header[idx_gt])
+            except:
+                table_idx_gt.append(9999)
+                table_url_gt.append("error")
+                table_token_len_gt.append(9999)
+                table_header_gt.append("error")
+                print("sem tabela gt")
+
 
             #answer_table_id = dataset.loc[]
             #answer_table_uid = lista_id['table_uid'].replace("'", "").replace('"', '').replace('(', '').replace(')', '').replace(',', '.').replace('*', '')  # ground trhuth
             #answer_table_idx = dataset
 
-            if answer_table_uid == table_uid_top100[0]:
+            if f'/data/tat-qa/csv/{answer_table_uid}.csv' == table_uid_top100[0]:
                 top1_flag_list.append(True)
                 top10_flag_list.append(False)
                 top50_flag_list.append(False)
                 top100_flag_list.append(False)
-            elif answer_table_uid in table_uid_top100[1:11]:   # ATENCAO PARA A ESTATISTICA
+            elif f'/data/tat-qa/csv/{answer_table_uid}.csv' in table_uid_top100[1:11]:   # ATENCAO PARA A ESTATISTICA
                 top1_flag_list.append(False)
                 top10_flag_list.append(True)
                 top50_flag_list.append(False)
                 top100_flag_list.append(False)
-            elif answer_table_uid in table_uid_top100[11:51]:
+            elif f'/data/tat-qa/csv/{answer_table_uid}.csv' in table_uid_top100[11:51]:
                 top1_flag_list.append(False)
                 top10_flag_list.append(False)
                 top50_flag_list.append(True)
                 top100_flag_list.append(False)
-            elif answer_table_uid in table_uid_top100[51:100]:
+            elif f'/data/tat-qa/csv/{answer_table_uid}.csv' in table_uid_top100[51:100]:
                 top1_flag_list.append(False)
                 top10_flag_list.append(False)
                 top50_flag_list.append(False)
@@ -188,8 +209,28 @@ def build_retriever(embedding_file, device ,run_improve_question, llm):
     dataset['top10_flag']      = top10_flag_list
     dataset['top50_flag']      = top50_flag_list
     dataset['top100_flag']     = top100_flag_list
-    dataset['top100_table_intro'] = table_intro_list
-
-    
+    dataset['top100_table_intro'] = table_intro_list    
 
     return dataset
+
+
+def remove_questions(file_source, to_remove):
+    df = pd.read_csv(file_source, sep=',')
+    df_to_remove = pd.read_csv(to_remove, sep=',')
+    list_to_remove = df_to_remove['question_id'].to_list()
+
+    print('antes ', df.shape)
+    df_filtered = df[~df['question_id'].isin(list_to_remove)]
+    print('depois ', df_filtered.shape)
+
+    #file_source = file_source.replace("improved","improved/improved_e_filter002")
+
+    new_file = file_source.replace(".csv","_filtered.csv")
+    df_filtered.to_csv(new_file, sep=',', index=False)
+
+
+ 
+#fin = '/data/tat-qa/retriever/mpnet_table_intro_embeddings_cpu_512_512.csv'
+#to_remove = '/data/tat-qa/remover.2024.07.30.csv'
+#to_remove = '/data/tat-qa/to_filter/remover002.unnmamed0.2024.08.10.csv'
+#remove_questions(fin, to_remove)

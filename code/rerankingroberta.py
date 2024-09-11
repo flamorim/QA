@@ -41,7 +41,7 @@ def build_reranking(retriever_file, device, run_improve_question):
 
 
             dataset = pd.read_csv(retriever_file,sep=',')
-            dataset = dataset.drop(dataset.index[:1750])  ### removendo as ja feitas  nao zerei o index
+            ##dataset = dataset.drop(dataset.index[:1750])  ### removendo as ja feitas  nao zerei o index
 
             df = pd.DataFrame()
 

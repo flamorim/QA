@@ -74,7 +74,7 @@ def convert_dataset(data):
         #table_idx_gt    = []
         table_uid_gt    = []
         answer_text_gt  = []
-        question_postag = []
+        #question_postag = []
         
         idx = 0
         for qa in data:
@@ -84,15 +84,15 @@ def convert_dataset(data):
 
             #table_idx_gt.append(idx)
             answer_text_gt.append(qa["answer-text"])
-            question_postag.append(qa["question_postag"])
+            #question_postag.append(qa["question_postag"])
             idx +=1
 
         df = pd.DataFrame({'question_id'     : question_id,
                            'question_txt'    : question_txt,
                            'table_uid_gt'    : table_uid_gt,
                            #'table_idx_gt'    : table_idx_gt,
-                           'answer_text_gt'  : answer_text_gt,
-                           'question_postag' : question_postag})
+                           'answer_text_gt'  : answer_text_gt})
+                           #'question_postag' : question_postag})
         
         df.top1_flag   = False
         df.top10_flag  = False
@@ -203,13 +203,16 @@ def convert_to_df(hits):
 
 # transforma as listas em um df
 def convert_dataset(data):
-        
+        question_idx    = []
         question_id     = []
         question_txt    = []
         #table_idx_gt    = []
         table_uid_gt    = []
         answer_text_gt  = []
-        question_postag = []
+        answer_type     = []
+        answer_from     = []
+
+        #question_postag = []
         
         idx = 0
         for qa in data:
@@ -219,15 +222,23 @@ def convert_dataset(data):
 
             #table_idx_gt.append(idx)
             answer_text_gt.append(qa["answer-text"])
-            question_postag.append(qa["question_postag"])
+            answer_type.append(qa['answer_type'])
+            answer_from.append(qa['answer_from'])
+            
+            question_idx.append(idx)
+
+            #question_postag.append(qa["question_postag"])
             idx +=1
 
-        df = pd.DataFrame({'question_id'     : question_id,
+        df = pd.DataFrame({'question_idx'     : question_idx,
+                           'question_id'     : question_id,
                            'question_txt'    : question_txt,
                            'table_uid_gt'    : table_uid_gt,
                            #'table_idx_gt'    : table_idx_gt,
                            'answer_text_gt'  : answer_text_gt,
-                           'question_postag' : question_postag})
+                           'answer_type'     : answer_type,
+                           'answer_from'     : answer_from})
+                           #'question_postag' : question_postag})
         
         df.top1_flag   = False
         df.top10_flag  = False

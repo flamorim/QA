@@ -1,11 +1,25 @@
 {
-    "retriever_source"             : "xx/data/ott-qa/embeddings/improved/", 
-    "retriever_destination"        : "xx/data/ott-qa/retriever/improved003/",
+    "retriever_source"             : "xx/data/tat-qa/embeddings/", 
+    "retriever_destination"        : "xx/data/tat-qa/retriever/improved/",
 
-    "reranker_marcomini_source"        : "xx/data/ott-qa/retriever/improved001/",
-    "reranker_marcomini_destination"   : "xx/data/ott-qa/reranking/improved001/",
-    
-    "reranker_roberta_source"      : "/data/ott-qa/retriever/",
-    "reranker_roberta_destination" : "/data/ott-qa/reranking/"
-}
+    "reranker_marcomini_source"        : "xx/data/tat-qa/retriever/",
+    "reranker_marcomini_destination"   : "xx/data/tat-qa/reranking/intro_improved_filter/",
+
+    "reranker_marcominiintro_source"        : "xx/data/tat-qa/retriever/",
+    "reranker_marcominiintro_destination"   : "xx/data/tat-qa/reranking/",
+
+
+    "reranker_roberta_source"      : "xx/data/ott-qa/retriever/",
+    "reranker_roberta_destination" : "xx/data/ott-qa/reranking/",
+
+    "reader_source"        : "xx/data/tat-qa/reranking/intro_improved_filter/",
+    "reader_destination"   : "xx/data/tat-qa/reader_tapex.../",
+
+    "reader_opt_source"        : "/data/tat-qa/reranking/intro_improved_filter/",
+    "reader_opt_destination"   : "/data/tat-qa/reader_table_opt/new-rr-cenario4-score6/",
+
+
+    "llm_table_opt_source"        : "xx/data/tat-qa/reranking/intro_improved_filter/",
+    "llm_table_opt_destination"   : "xx/data/tat-qa/llm_table_opt/fromrerankingcenario4/"
  
+}
